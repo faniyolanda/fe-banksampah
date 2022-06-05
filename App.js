@@ -14,7 +14,7 @@ function App() {
         screenOptions={{
           headerShown: false,
         }}
-        initialRouteName={'Register'}>
+        initialRouteName={'Login'}>
         <Stack.Screen name="Login" component={Login} />
         <Stack.Screen name="Register" component={Register} />
         <Stack.Screen name="MainLayout" component={MainLayout} />

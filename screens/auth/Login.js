@@ -1,7 +1,7 @@
 import React from 'react';
 import {View, Text, TextInput, TouchableOpacity} from 'react-native';
 
-const Login = () => {
+const Login = ({navigation}) => {
   const [email, setEmail] = React.useState('');
   const [password, setPassword] = React.useState('');
 
@@ -22,6 +22,7 @@ const Login = () => {
         .then(json => {
           if (json.success == true) {
             console.log('Aku bisaaaa yeyy');
+            navigation.navigate('MainLayout');
           } else {
             console.log('Nice Try');
           }
