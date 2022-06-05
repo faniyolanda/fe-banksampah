@@ -5,9 +5,9 @@ const Login = () => {
   const [email, setEmail] = React.useState('');
   const [password, setPassword] = React.useState('');
 
-  function login() {
+  function signin() {
     try {
-      fetch('localhost:8080/api/login', {
+      fetch('http://192.168.1.9/be-banksampah/public/api/login', {
         method: 'POST',
         headers: {
           Accept: 'application/json',
@@ -78,7 +78,7 @@ const Login = () => {
           marginVertical: 20,
           justifyContent: 'center',
         }}
-        onPress={() => console.log(email)}>
+        onPress={() => signin()}>
         <Text
           style={{
             alignSelf: 'center',

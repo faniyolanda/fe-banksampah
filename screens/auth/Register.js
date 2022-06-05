@@ -2,6 +2,39 @@ import React from 'react';
 import {View, Text, TextInput, TouchableOpacity} from 'react-native';
 
 const Register = () => {
+  const [email, setEmail] = React.useState('');
+  const [name, setName] = React.useState('');
+  const [password, setPassword] = React.useState('');
+
+  function signup() {
+    try {
+      fetch('http://192.168.1.9/be-banksampah/public/api/register', {
+        method: 'POST',
+        headers: {
+          Accept: 'application/json',
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          email: email,
+          name: name,
+          password: password,
+        }),
+      })
+        .then(response => response.json())
+        .then(json => {
+          console.log(json);
+          if (json.success == true) {
+            console.log('Aku bisaaaa yeyy');
+          } else {
+            console.log('Nice Try');
+          }
+        })
+        .catch(err => console.log(err));
+    } catch (err) {
+      console.log(err);
+    }
+  }
+
   return (
     <View
       style={{
@@ -25,7 +58,8 @@ const Register = () => {
           borderRadius: 20,
           paddingLeft: 20,
         }}
-        placeholder=" Email"></TextInput>
+        placeholder=" Email"
+        onChangeText={value => setEmail(value)}></TextInput>
       <TextInput
         style={{
           color: 'black',
@@ -35,7 +69,8 @@ const Register = () => {
           borderRadius: 20,
           paddingLeft: 20,
         }}
-        placeholder=" Username"></TextInput>
+        placeholder=" Username"
+        onChangeText={value => setName(value)}></TextInput>
       <TextInput
         style={{
           color: 'black',
@@ -45,7 +80,8 @@ const Register = () => {
           borderRadius: 20,
           paddingLeft: 20,
         }}
-        placeholder=" Password"></TextInput>
+        placeholder=" Password"
+        onChangeText={value => setPassword(value)}></TextInput>
       <TouchableOpacity
         style={{
           backgroundColor: '#009900',
@@ -57,7 +93,7 @@ const Register = () => {
           marginVertical: 20,
           justifyContent: 'center',
         }}
-        onPress={() => console.log(email)}>
+        onPress={() => signup()}>
         <Text
           style={{
             alignSelf: 'center',
