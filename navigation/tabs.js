@@ -6,7 +6,7 @@ import {
 } from '@react-navigation/bottom-tabs';
 import Svg, { Path } from 'react-native-svg';
 
-import { Home } from '../screens';
+import { Home, Cart, Transaction, Profile } from '../screens';
 
 import { COLORS, icons } from '../constants';
 
@@ -109,7 +109,7 @@ const Tabs = () => {
 
             <Tab.Screen
                 name="Cart"
-                component={Home}
+                component={Cart}
                 options={{
                     tabBarIcon: ({ focused }) => (
                         <Image
@@ -130,7 +130,7 @@ const Tabs = () => {
 
             <Tab.Screen
                 name="Transaction"
-                component={Home}
+                component={Transaction}
                 options={{
                     tabBarIcon: ({ focused }) => (
                         <Image
@@ -151,7 +151,7 @@ const Tabs = () => {
 
             <Tab.Screen
                 name="Profile"
-                component={Home}
+                component={Profile}
                 options={{
                     tabBarIcon: ({ focused }) => (
                         <Image
