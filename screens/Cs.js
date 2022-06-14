@@ -1,13 +1,13 @@
 import React from 'react';
 import { View, Text } from 'react-native';
-import { SIZES, COLORS, icons, FONTS } from '../constants';
 import { Header, IconButton } from '../components';
+import { SIZES, COLORS, icons, FONTS } from '../constants';
 
-const About = ({ navigation }) => {
+const Cs = ({ navigation }) => {
     function renderHeader() {
         return (
             <Header
-                title="Tentang Bank Sampah"
+                title="Customer Service"
                 containerStyle={{
                     height: 50,
                     marginHorizontal: SIZES.padding,
@@ -67,4 +67,4 @@ const About = ({ navigation }) => {
     );
 };
 
-export default About;
+export default Cs;

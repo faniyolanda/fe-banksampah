@@ -12,7 +12,12 @@ import {
     Cart,
     Transaction,
     Profile,
-    About
+    About,
+    Cs,
+    UndangTeman,
+    Kebijakan,
+    Ketentuan,
+    Edit
 } from './screens';
 
 const Stack = createNativeStackNavigator();
@@ -34,6 +39,11 @@ function App() {
                 <Stack.Screen name="Login" component={Login} />
                 <Stack.Screen name="Register" component={Register} />
                 <Stack.Screen name="About" component={About} />
+                <Stack.Screen name="Cs" component={Cs} />
+                <Stack.Screen name="Ketentuan" component={Ketentuan} />
+                <Stack.Screen name="Kebijakan" component={Kebijakan} />
+                <Stack.Screen name="UndangTeman" component={UndangTeman} />
+                <Stack.Screen name="Edit" component={Edit} />
             </Stack.Navigator>
         </NavigationContainer>
     );

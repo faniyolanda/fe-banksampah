@@ -85,7 +85,7 @@ const Profile = ({ navigation }) => {
                             borderWidth: 1,
                             borderColor: COLORS.lightGray1
                         }}
-                        onPress={() => navigation.navigate('UnderConstruction')}
+                        onPress={() => navigation.navigate('Edit')}
                     >
                         <View
                             style={{
@@ -148,7 +148,7 @@ const Profile = ({ navigation }) => {
                             borderWidth: 1,
                             borderColor: COLORS.lightGray1
                         }}
-                        onPress={() => navigation.navigate('UnderConstruction')}
+                        onPress={() => navigation.navigate('UndangTeman')}
                     >
                         <View
                             style={{
@@ -221,7 +221,7 @@ const Profile = ({ navigation }) => {
                             borderWidth: 1,
                             borderColor: COLORS.lightGray1
                         }}
-                        onPress={() => navigation.navigate('UnderConstruction')}
+                        onPress={() => navigation.navigate('Kebijakan')}
                     >
                         <View
                             style={{
@@ -284,7 +284,7 @@ const Profile = ({ navigation }) => {
                             borderWidth: 1,
                             borderColor: COLORS.lightGray1
                         }}
-                        onPress={() => navigation.navigate('UnderConstruction')}
+                        onPress={() => navigation.navigate('Ketentuan')}
                     >
                         <View
                             style={{
@@ -347,7 +347,7 @@ const Profile = ({ navigation }) => {
                             borderWidth: 1,
                             borderColor: COLORS.lightGray1
                         }}
-                        onPress={() => navigation.navigate('UnderConstruction')}
+                        onPress={() => navigation.navigate('Cs')}
                     >
                         <View
                             style={{
