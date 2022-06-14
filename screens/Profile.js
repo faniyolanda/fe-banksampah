@@ -1,15 +1,69 @@
 import React from 'react';
 import { View, Text, ScrollView, TouchableOpacity, Image } from 'react-native';
 import { SIZES, COLORS, icons, FONTS } from '../constants';
-import { TextButton } from '../components';
+import { TextButton, Header, IconButton } from '../components';
 
 const Profile = ({ navigation }) => {
+    function renderHeader() {
+        return (
+            <Header
+                title="Profile"
+                containerStyle={{
+                    height: 50,
+                    marginHorizontal: SIZES.padding,
+                    marginTop: 25
+                }}
+                leftComponent={
+                    <IconButton
+                        icon={icons.back}
+                        containerStyle={{
+                            width: 40,
+                            height: 40,
+                            justifyContent: 'center',
+                            alignItems: 'center',
+                            borderWidth: 1,
+                            borderRadius: SIZES.radius,
+                            borderColor: COLORS.gray2
+                        }}
+                        iconStyle={{
+                            width: 20,
+                            height: 20,
+                            tintColor: COLORS.gray2
+                        }}
+                        onPress={() => navigation.goBack()}
+                    ></IconButton>
+                }
+                rightComponent={
+                    <IconButton
+                        icon={icons.callcenter}
+                        containerStyle={{
+                            width: 40,
+                            height: 40,
+                            justifyContent: 'center',
+                            alignItems: 'center',
+                            borderWidth: 1,
+                            borderRadius: SIZES.radius,
+                            borderColor: COLORS.gray2
+                        }}
+                        iconStyle={{
+                            width: 20,
+                            height: 20,
+                            tintColor: COLORS.gray2
+                        }}
+                        onPress={() => navigation.navigate('HelpCenter')}
+                    ></IconButton>
+                }
+            ></Header>
+        );
+    }
+
     return (
         <View
             style={{
                 flex: 1
             }}
         >
+            {renderHeader()}
             <ScrollView
                 style={{
                     flex: 1
@@ -71,7 +125,7 @@ const Profile = ({ navigation }) => {
                             <Image
                                 style={{
                                     alignSelf: 'center',
-                                    tintColor: COLORS.transparentBlack7,
+                                    tintColor: COLORS.lightGray1,
                                     width: 12,
                                     height: 12
                                 }}
@@ -81,7 +135,7 @@ const Profile = ({ navigation }) => {
                     </TouchableOpacity>
                     <View
                         style={{
-                            height: SIZES.duapuluh
+                            height: 15
                         }}
                     ></View>
 
@@ -134,7 +188,7 @@ const Profile = ({ navigation }) => {
                             <Image
                                 style={{
                                     alignSelf: 'center',
-                                    tintColor: COLORS.transparentBlack7,
+                                    tintColor: COLORS.lightGray1,
                                     width: 12,
                                     height: 12
                                 }}
@@ -207,7 +261,7 @@ const Profile = ({ navigation }) => {
                             <Image
                                 style={{
                                     alignSelf: 'center',
-                                    tintColor: COLORS.transparentBlack7,
+                                    tintColor: COLORS.lightGray1,
                                     width: 12,
                                     height: 12
                                 }}
@@ -217,7 +271,7 @@ const Profile = ({ navigation }) => {
                     </TouchableOpacity>
                     <View
                         style={{
-                            height: SIZES.duapuluh
+                            height: 15
                         }}
                     ></View>
 
@@ -270,7 +324,7 @@ const Profile = ({ navigation }) => {
                             <Image
                                 style={{
                                     alignSelf: 'center',
-                                    tintColor: COLORS.transparentBlack7,
+                                    tintColor: COLORS.lightGray1,
                                     width: 12,
                                     height: 12
                                 }}
@@ -280,7 +334,7 @@ const Profile = ({ navigation }) => {
                     </TouchableOpacity>
                     <View
                         style={{
-                            height: SIZES.duapuluh
+                            height: 15
                         }}
                     ></View>
 
@@ -333,7 +387,7 @@ const Profile = ({ navigation }) => {
                             <Image
                                 style={{
                                     alignSelf: 'center',
-                                    tintColor: COLORS.transparentBlack7,
+                                    tintColor: COLORS.lightGray1,
                                     width: 12,
                                     height: 12
                                 }}
@@ -343,7 +397,7 @@ const Profile = ({ navigation }) => {
                     </TouchableOpacity>
                     <View
                         style={{
-                            height: SIZES.duapuluh
+                            height: 15
                         }}
                     ></View>
 
@@ -396,7 +450,7 @@ const Profile = ({ navigation }) => {
                             <Image
                                 style={{
                                     alignSelf: 'center',
-                                    tintColor: COLORS.transparentBlack7,
+                                    tintColor: COLORS.lightGray1,
                                     width: 12,
                                     height: 12
                                 }}
@@ -404,17 +458,13 @@ const Profile = ({ navigation }) => {
                             />
                         </View>
                     </TouchableOpacity>
-                    <View
-                        style={{
-                            height: SIZES.duapuluh
-                        }}
-                    ></View>
                 </View>
                 <View
                     style={{
                         marginTop: SIZES.padding,
                         alignItems: 'center',
-                        justifyContent: 'center'
+                        justifyContent: 'center',
+                        marginBottom: 50
                     }}
                 >
                     <TextButton

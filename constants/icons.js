@@ -8,6 +8,8 @@ const privacypolice = require('../assets/icons/privacypolice.png');
 const customerservice = require('../assets/icons/customerservice.png');
 const banksampah = require('../assets/icons/banksampah.png');
 const policyterm = require('../assets/icons/policyterm.png');
+const back = require('../assets/icons/back.png');
+const callcenter = require('../assets/icons/callcenter.png');
 
 export default {
     home,
@@ -19,5 +21,7 @@ export default {
     privacypolice,
     customerservice,
     banksampah,
-    policyterm
+    policyterm,
+    back,
+    callcenter
 };
