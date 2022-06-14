@@ -3,11 +3,21 @@ const profile = require('../assets/icons/profile.png');
 const cart = require('../assets/icons/cart.png');
 const transaction = require('../assets/icons/transaction.png');
 const rightarrow = require('../assets/icons/rightarrow.png');
+const invite = require('../assets/icons/invite.png');
+const privacypolice = require('../assets/icons/privacypolice.png');
+const customerservice = require('../assets/icons/customerservice.png');
+const banksampah = require('../assets/icons/banksampah.png');
+const policyterm = require('../assets/icons/policyterm.png');
 
 export default {
     home,
     profile,
     cart,
     transaction,
-    rightarrow
+    rightarrow,
+    invite,
+    privacypolice,
+    customerservice,
+    banksampah,
+    policyterm
 };

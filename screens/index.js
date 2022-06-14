@@ -15,5 +15,6 @@ import Login from './Login';
 
 // Register
 import Register from './Register';
+import About from './About';
 
-export { Login, Register, Home, Cart, Transaction, Profile };
+export { Login, Register, Home, Cart, Transaction, Profile, About };

@@ -5,7 +5,15 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 import Tabs from './navigation/tabs';
 
-import { Login, Register, Home, Cart, Transaction, Profile } from './screens';
+import {
+    Login,
+    Register,
+    Home,
+    Cart,
+    Transaction,
+    Profile,
+    About
+} from './screens';
 
 const Stack = createNativeStackNavigator();
 
@@ -25,6 +33,7 @@ function App() {
                 <Stack.Screen name="Profile" component={Profile} />
                 <Stack.Screen name="Login" component={Login} />
                 <Stack.Screen name="Register" component={Register} />
+                <Stack.Screen name="About" component={About} />
             </Stack.Navigator>
         </NavigationContainer>
     );
