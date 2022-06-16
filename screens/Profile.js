@@ -1,5 +1,12 @@
 import React from 'react';
-import { View, Text, ScrollView, TouchableOpacity, Image } from 'react-native';
+import {
+    View,
+    Text,
+    ScrollView,
+    TouchableOpacity,
+    Image,
+    Share
+} from 'react-native';
 import { SIZES, COLORS, icons, FONTS } from '../constants';
 import { TextButton, Header, IconButton } from '../components';
 
@@ -57,6 +64,26 @@ const Profile = ({ navigation }) => {
         );
     }
 
+    const onShare = async () => {
+        try {
+            const result = await Share.share({
+                message:
+                    'Ayo download aplikasi terbaru dari Bank Sampah Unit Andalas Sepakat Kota Padang, dan dapatkan info serta event menarik untuk kamu! Buruan downlad di link berikut : https://banksampah.com '
+            });
+            if (result.action === Share.sharedAction) {
+                if (result.activityType) {
+                    // shared with activity type of result.activityType
+                } else {
+                    // shared
+                }
+            } else if (result.action === Share.dismissedAction) {
+                // dismissed
+            }
+        } catch (error) {
+            alert(error.message);
+        }
+    };
+
     return (
         <View
             style={{
@@ -64,11 +91,45 @@ const Profile = ({ navigation }) => {
             }}
         >
             {renderHeader()}
+
             <ScrollView
                 style={{
                     flex: 1
                 }}
             >
+                <View
+                    style={{
+                        alignItems: 'center',
+                        marginTop: 10,
+                        marginBottom: 10
+                    }}
+                >
+                    <Image
+                        style={{
+                            width: 100,
+                            height: 100,
+                            borderRadius: 20,
+                            marginVertical: 10
+                        }}
+                        source={icons.profile}
+                    ></Image>
+                    <Text
+                        style={{
+                            color: COLORS.primary,
+                            ...FONTS.h3
+                        }}
+                    >
+                        Fani Yolanda
+                    </Text>
+                    <Text
+                        style={{
+                            color: COLORS.black,
+                            ...FONTS.body4
+                        }}
+                    >
+                        faniyolanda0814@gmail.com
+                    </Text>
+                </View>
                 <View
                     style={{
                         flexDirection: 'column',
@@ -148,7 +209,7 @@ const Profile = ({ navigation }) => {
                             borderWidth: 1,
                             borderColor: COLORS.lightGray1
                         }}
-                        onPress={() => navigation.navigate('UndangTeman')}
+                        onPress={() => onShare()}
                     >
                         <View
                             style={{

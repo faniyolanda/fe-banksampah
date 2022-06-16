@@ -56,6 +56,14 @@ const Home = ({ navigation }) => {
             ></Header>
         );
     }
+
+    function renderItem() {
+        return (
+            <View>
+                <Text>i love u</Text>
+            </View>
+        );
+    }
     return (
         <View
             style={{
@@ -63,6 +71,8 @@ const Home = ({ navigation }) => {
             }}
         >
             {renderHeader()}
+
+            {renderItem()}
         </View>
     );
 };

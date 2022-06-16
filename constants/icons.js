@@ -10,6 +10,8 @@ const banksampah = require('../assets/icons/banksampah.png');
 const policyterm = require('../assets/icons/policyterm.png');
 const back = require('../assets/icons/back.png');
 const callcenter = require('../assets/icons/callcenter.png');
+const search = require('../assets/icons/search.png');
+const filter = require('../assets/icons/filter.png');
 
 export default {
     home,
@@ -23,5 +25,7 @@ export default {
     banksampah,
     policyterm,
     back,
-    callcenter
+    callcenter,
+    search,
+    filter
 };
