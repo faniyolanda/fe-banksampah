@@ -17,7 +17,8 @@ import {
     UndangTeman,
     Kebijakan,
     Ketentuan,
-    Edit
+    Edit,
+    Detail
 } from './screens';
 
 const Stack = createNativeStackNavigator();
@@ -44,6 +45,7 @@ function App() {
                 <Stack.Screen name="Kebijakan" component={Kebijakan} />
                 <Stack.Screen name="UndangTeman" component={UndangTeman} />
                 <Stack.Screen name="Edit" component={Edit} />
+                <Stack.Screen name="Detail" component={Detail} />
             </Stack.Navigator>
         </NavigationContainer>
     );

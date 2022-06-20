@@ -1,19 +1,8 @@
-// Home
 import Home from './Home';
-
-// Cart
 import Cart from './Cart';
-
-// Transaction
 import Transaction from './Transaction';
-
-// Profile
 import Profile from './Profile';
-
-// Login
 import Login from './Login';
-
-// Register
 import Register from './Register';
 import About from './About';
 import Cs from './Cs';
@@ -21,6 +10,7 @@ import Ketentuan from './Ketentuan';
 import Kebijakan from './Kebijakan';
 import UndangTeman from './UndangTeman';
 import Edit from './Edit';
+import Detail from './Detail';
 
 export {
     Login,
@@ -34,5 +24,6 @@ export {
     Ketentuan,
     Kebijakan,
     UndangTeman,
-    Edit
+    Edit,
+    Detail
 };

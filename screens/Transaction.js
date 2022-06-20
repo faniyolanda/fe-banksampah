@@ -1,7 +1,8 @@
 import React from 'react';
-import { View, Text } from 'react-native';
+import { View, Text, Image } from 'react-native';
 import { SIZES, COLORS, icons, FONTS } from '../constants';
-import { Header, IconButton } from '../components';
+import { Header, IconButton, TextButton } from '../components';
+import { ScrollView } from 'react-native-gesture-handler';
 
 const Home = ({ navigation }) => {
     function renderHeader() {
@@ -59,8 +60,87 @@ const Home = ({ navigation }) => {
 
     function renderItem() {
         return (
-            <View>
-                <Text>i love u</Text>
+            <View
+                style={{
+                    height: 150,
+                    marginHorizontal: SIZES.padding,
+                    marginVertical: 10,
+                    borderRadius: SIZES.radius,
+                    borderWidth: 1,
+                    borderColor: COLORS.lightGray1,
+                    padding: SIZES.radius
+                }}
+            >
+                <View
+                    style={{
+                        flexDirection: 'column',
+                        flex: 1
+                    }}
+                >
+                    <View
+                        style={{
+                            flex: 1
+                        }}
+                    >
+                        <Text
+                            style={{
+                                ...FONTS.h4
+                            }}
+                        >
+                            17 Jun 2022
+                        </Text>
+                    </View>
+                    <View
+                        style={{
+                            flex: 1,
+                            flexDirection: 'row'
+                        }}
+                    >
+                        <Text
+                            style={{
+                                flex: 1,
+                                ...FONTS.body4
+                            }}
+                        >
+                            Total Deposit
+                        </Text>
+                        <Text
+                            style={{
+                                ...FONTS.h4
+                            }}
+                        >
+                            Rp. 20.000
+                        </Text>
+                    </View>
+                    <View
+                        style={{
+                            flexDirection: 'row',
+                            flex: 1
+                        }}
+                    >
+                        <Text
+                            style={{
+                                flex: 1,
+                                alignSelf: 'center',
+                                ...FONTS.h4
+                            }}
+                        >
+                            SUKSES
+                        </Text>
+                        <View style={{ flex: 1 }}>
+                            <TextButton
+                                buttonContainerStyle={{
+                                    borderRadius: SIZES.radius,
+                                    backgroundColor: COLORS.primary,
+                                    paddingHorizontal: 50,
+                                    paddingVertical: SIZES.radius
+                                }}
+                                label="Detail"
+                                onPress={() => navigation.navigate('Login')}
+                            ></TextButton>
+                        </View>
+                    </View>
+                </View>
             </View>
         );
     }
@@ -71,8 +151,13 @@ const Home = ({ navigation }) => {
             }}
         >
             {renderHeader()}
-
-            {renderItem()}
+            <ScrollView>
+                {renderItem()}
+                {renderItem()}
+                {renderItem()}
+                {renderItem()}
+                {renderItem()}
+            </ScrollView>
         </View>
     );
 };
