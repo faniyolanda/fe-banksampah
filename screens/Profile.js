@@ -530,7 +530,7 @@ const Profile = ({ navigation }) => {
                 >
                     <TextButton
                         buttonContainerStyle={{
-                            borderRadius: SIZES.padding,
+                            borderRadius: 10,
                             backgroundColor: COLORS.primary,
                             paddingHorizontal: 50,
                             paddingVertical: SIZES.radius
