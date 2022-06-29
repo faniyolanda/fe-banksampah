@@ -1,7 +1,9 @@
 import React from 'react';
 import { View, Text, TextInput, TouchableOpacity } from 'react-native';
+import { Header, IconButton } from '../components';
+import { SIZES, COLORS, icons, FONTS } from '../constants';
 
-const Register = () => {
+const Register = ({ navigation }) => {
     const [email, setEmail] = React.useState('');
     const [name, setName] = React.useState('');
     const [password, setPassword] = React.useState('');
@@ -35,58 +37,155 @@ const Register = () => {
         }
     }
 
+    function renderHeader() {
+        return (
+            <Header
+                title=""
+                containerStyle={{
+                    height: 50,
+                    marginHorizontal: SIZES.padding,
+                    marginTop: 25
+                }}
+                leftComponent={
+                    <IconButton
+                        icon={icons.back}
+                        containerStyle={{
+                            width: 40,
+                            height: 40,
+                            justifyContent: 'center',
+                            alignItems: 'center',
+                            borderWidth: 1,
+                            borderRadius: SIZES.radius,
+                            borderColor: COLORS.gray2
+                        }}
+                        iconStyle={{
+                            width: 20,
+                            height: 20,
+                            tintColor: COLORS.gray2
+                        }}
+                        onPress={() => navigation.goBack()}
+                    ></IconButton>
+                }
+                rightComponent={
+                    <IconButton
+                        icon={icons.callcenter}
+                        containerStyle={{
+                            width: 40,
+                            height: 40,
+                            justifyContent: 'center',
+                            alignItems: 'center',
+                            borderWidth: 1,
+                            borderRadius: SIZES.radius,
+                            borderColor: COLORS.gray2
+                        }}
+                        iconStyle={{
+                            width: 20,
+                            height: 20,
+                            tintColor: COLORS.gray2
+                        }}
+                        onPress={() => navigation.navigate('HelpCenter')}
+                    ></IconButton>
+                }
+            ></Header>
+        );
+    }
+
     return (
         <View
             style={{
                 flex: 1,
-                justifyContent: 'center'
+                backgroundColor: COLORS.white
             }}
         >
-            <Text
-                style={{
-                    alignSelf: 'center',
-                    fontSize: 20,
-                    marginBottom: 30
-                }}
-            >
-                Silahkan isi data untuk pendaftaran
-            </Text>
-            <TextInput
-                style={{
-                    color: 'black',
-                    backgroundColor: '#cccccc',
-                    marginHorizontal: 20,
-                    marginVertical: 10,
-                    borderRadius: 20,
-                    paddingLeft: 20
-                }}
-                placeholder=" Email"
-                onChangeText={(value) => setEmail(value)}
-            ></TextInput>
-            <TextInput
-                style={{
-                    color: 'black',
-                    backgroundColor: '#cccccc',
-                    marginHorizontal: 20,
-                    marginVertical: 10,
-                    borderRadius: 20,
-                    paddingLeft: 20
-                }}
-                placeholder=" Username"
-                onChangeText={(value) => setName(value)}
-            ></TextInput>
-            <TextInput
-                style={{
-                    color: 'black',
-                    backgroundColor: '#cccccc',
-                    marginHorizontal: 20,
-                    marginVertical: 10,
-                    borderRadius: 20,
-                    paddingLeft: 20
-                }}
-                placeholder=" Password"
-                onChangeText={(value) => setPassword(value)}
-            ></TextInput>
+            {renderHeader()}
+            <View style={{ marginHorizontal: SIZES.padding }}>
+                <View style={{ marginTop: 30 }}>
+                    <View>
+                        <Text
+                            style={{
+                                ...FONTS.h2
+                            }}
+                        >
+                            Daftar
+                        </Text>
+                        <Text
+                            style={{
+                                color: COLORS.darkGray,
+                                marginTop: SIZES.base,
+                                ...FONTS.body3
+                            }}
+                        >
+                            Silahkan lengkapi data dibawah ini untuk melanjutkan
+                            pendaftaran.
+                        </Text>
+                    </View>
+                </View>
+                {/* Text Input Email */}
+                <View style={{ marginTop: 30 }}>
+                    <Text
+                        style={{
+                            color: COLORS.gray,
+                            ...FONTS.body4
+                        }}
+                    >
+                        Email
+                    </Text>
+                    <TextInput
+                        style={{
+                            color: 'black',
+                            backgroundColor: COLORS.lightGray2,
+                            marginVertical: 10,
+                            borderRadius: 10,
+                            paddingLeft: 20
+                        }}
+                        onChangeText={(value) => setEmail(value)}
+                    ></TextInput>
+                </View>
+                <View style={{ marginTop: 10 }}>
+                    <Text
+                        style={{
+                            color: COLORS.gray,
+                            ...FONTS.body4
+                        }}
+                    >
+                        Username
+                    </Text>
+                    <TextInput
+                        style={{
+                            color: 'black',
+                            backgroundColor: COLORS.lightGray2,
+                            marginVertical: 10,
+                            borderRadius: 10,
+                            paddingLeft: 20
+                        }}
+                        onChangeText={(value) => setName(value)}
+                        secureTextEntry={true}
+                    ></TextInput>
+                </View>
+                {/* Text Input Password */}
+                <View style={{ marginTop: 10 }}>
+                    <Text
+                        style={{
+                            color: COLORS.gray,
+                            ...FONTS.body4
+                        }}
+                    >
+                        Password
+                    </Text>
+                    <TextInput
+                        style={{
+                            color: 'black',
+                            backgroundColor: COLORS.lightGray2,
+                            marginVertical: 10,
+                            borderRadius: 10,
+                            paddingLeft: 20
+                        }}
+                        onChangeText={(value) => setPassword(value)}
+                        secureTextEntry={true}
+                    ></TextInput>
+                </View>
+            </View>
+
             <TouchableOpacity
                 style={{
                     backgroundColor: '#009900',
@@ -113,10 +212,19 @@ const Register = () => {
             </TouchableOpacity>
             <Text
                 style={{
-                    alignSelf: 'center'
+                    alignSelf: 'center',
+                    ...FONTS.body4
                 }}
             >
-                Sudah punya akun ?
+                Sudah punya akun?
+                <Text
+                    style={{
+                        color: COLORS.primary
+                    }}
+                    onPress={() => navigation.navigate('Login')}
+                >
+                    Masuk
+                </Text>
             </Text>
         </View>
     );

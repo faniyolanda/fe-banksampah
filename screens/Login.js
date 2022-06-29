@@ -195,6 +195,22 @@ const Login = ({ navigation }) => {
                             Login
                         </Text>
                     </TouchableOpacity>
+                    <Text
+                        style={{
+                            alignSelf: 'center',
+                            ...FONTS.body4
+                        }}
+                    >
+                        Belum punya akun?
+                        <Text
+                            style={{
+                                color: COLORS.primary
+                            }}
+                            onPress={() => navigation.navigate('Register')}
+                        >
+                            Daftar disini
+                        </Text>
+                    </Text>
                 </View>
             </View>
         </>

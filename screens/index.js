@@ -9,7 +9,7 @@ import Cs from './Cs';
 import Ketentuan from './Ketentuan';
 import Kebijakan from './Kebijakan';
 import UndangTeman from './UndangTeman';
-import Edit from './Edit';
+import EditPassword from './EditPassword';
 import Detail from './Detail';
 
 export {
@@ -24,6 +24,6 @@ export {
     Ketentuan,
     Kebijakan,
     UndangTeman,
-    Edit,
+    EditPassword,
     Detail
 };

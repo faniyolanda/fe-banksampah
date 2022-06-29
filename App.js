@@ -17,7 +17,7 @@ import {
     UndangTeman,
     Kebijakan,
     Ketentuan,
-    Edit,
+    EditPassword,
     Detail
 } from './screens';
 
@@ -44,7 +44,7 @@ function App() {
                 <Stack.Screen name="Ketentuan" component={Ketentuan} />
                 <Stack.Screen name="Kebijakan" component={Kebijakan} />
                 <Stack.Screen name="UndangTeman" component={UndangTeman} />
-                <Stack.Screen name="Edit" component={Edit} />
+                <Stack.Screen name="EditPassword" component={EditPassword} />
                 <Stack.Screen name="Detail" component={Detail} />
             </Stack.Navigator>
         </NavigationContainer>

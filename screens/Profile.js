@@ -87,7 +87,8 @@ const Profile = ({ navigation }) => {
     return (
         <View
             style={{
-                flex: 1
+                flex: 1,
+                backgroundColor: COLORS.white
             }}
         >
             {renderHeader()}
@@ -137,7 +138,7 @@ const Profile = ({ navigation }) => {
                         marginBottom: 10
                     }}
                 >
-                    {/* Edit Profile */}
+                    {/* Edit Password */}
                     <TouchableOpacity
                         style={{
                             marginHorizontal: SIZES.padding,
@@ -146,7 +147,7 @@ const Profile = ({ navigation }) => {
                             borderWidth: 1,
                             borderColor: COLORS.lightGray1
                         }}
-                        onPress={() => navigation.navigate('Edit')}
+                        onPress={() => navigation.navigate('EditPassword')}
                     >
                         <View
                             style={{
@@ -164,7 +165,7 @@ const Profile = ({ navigation }) => {
                                 }}
                             >
                                 <Image
-                                    source={icons.profile}
+                                    source={icons.password}
                                     style={{
                                         width: 25,
                                         height: 25,
@@ -181,7 +182,7 @@ const Profile = ({ navigation }) => {
                                     ...FONTS.h4
                                 }}
                             >
-                                Edit Profile
+                                Edit Password
                             </Text>
                             <Image
                                 style={{

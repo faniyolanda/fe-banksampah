@@ -12,6 +12,7 @@ const back = require('../assets/icons/back.png');
 const callcenter = require('../assets/icons/callcenter.png');
 const search = require('../assets/icons/search.png');
 const filter = require('../assets/icons/filter.png');
+const password = require('../assets/icons/password.png');
 
 export default {
     home,
@@ -27,5 +28,6 @@ export default {
     back,
     callcenter,
     search,
-    filter
+    filter,
+    password
 };
