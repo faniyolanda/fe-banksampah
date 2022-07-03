@@ -13,6 +13,11 @@ const callcenter = require('../assets/icons/callcenter.png');
 const search = require('../assets/icons/search.png');
 const filter = require('../assets/icons/filter.png');
 const password = require('../assets/icons/password.png');
+const email = require('../assets/icons/email.png');
+const phone = require('../assets/icons/phone.png');
+const office = require('../assets/icons/office.png');
+const facebook = require('../assets/icons/facebook.png');
+const instagram = require('../assets/icons/instagram.png');
 
 export default {
     home,
@@ -29,5 +34,10 @@ export default {
     callcenter,
     search,
     filter,
-    password
+    password,
+    email,
+    phone,
+    office,
+    facebook,
+    instagram
 };

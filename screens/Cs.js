@@ -50,7 +50,7 @@ const Cs = ({ navigation }) => {
                             height: 20,
                             tintColor: COLORS.gray2
                         }}
-                        onPress={() => navigation.navigate('HelpCenter')}
+                        onPress={() => navigation.navigate('Cs')}
                     ></IconButton>
                 }
             ></Header>
@@ -81,10 +81,12 @@ const Cs = ({ navigation }) => {
                         }}
                     >
                         <Image
+                            source={icons.banksampah}
                             style={{
                                 width: 40,
                                 height: 40,
-                                marginRight: SIZES.radius
+                                marginRight: SIZES.radius,
+                                tintColor: COLORS.primary
                             }}
                         ></Image>
                         <View
@@ -307,7 +309,7 @@ const Cs = ({ navigation }) => {
                                     }}
                                 >
                                     <Image
-                                        source={icons.call}
+                                        source={icons.phone}
                                         style={{
                                             width: 25,
                                             height: 25,
@@ -328,6 +330,130 @@ const Cs = ({ navigation }) => {
                                         Telepon :{' '}
                                     </Text>{' '}
                                     0821 7153 8532
+                                </Text>
+                            </View>
+                        </TouchableOpacity>
+                    </View>
+
+                    <View
+                        style={{
+                            height: 15
+                        }}
+                    ></View>
+
+                    <View
+                        style={{
+                            paddingHorizontal: SIZES.padding
+                        }}
+                    >
+                        <TouchableOpacity
+                            style={{
+                                borderRadius: SIZES.radius,
+                                padding: SIZES.base,
+                                borderWidth: 1,
+                                borderColor: COLORS.lightGray1
+                            }}
+                            onPress={() => console.log('Tes')}
+                        >
+                            <View
+                                style={{
+                                    flexDirection: 'row'
+                                }}
+                            >
+                                <TouchableOpacity
+                                    style={{
+                                        width: 40,
+                                        height: 40,
+                                        alignItems: 'center',
+                                        justifyContent: 'center',
+                                        borderRadius: SIZES.radius,
+                                        backgroundColor: COLORS.primary
+                                    }}
+                                >
+                                    <Image
+                                        source={icons.facebook}
+                                        style={{
+                                            width: 25,
+                                            height: 25,
+                                            tintColor: COLORS.white
+                                        }}
+                                    ></Image>
+                                </TouchableOpacity>
+                                <Text
+                                    style={{
+                                        color: COLORS.transparentBlack7,
+                                        flex: 1,
+                                        marginHorizontal: SIZES.font,
+                                        alignSelf: 'center',
+                                        ...FONTS.h4
+                                    }}
+                                >
+                                    <Text style={{ ...FONTS.body4 }}>
+                                        Facebook :{' '}
+                                    </Text>{' '}
+                                    Bank Sampah Indonesia
+                                </Text>
+                            </View>
+                        </TouchableOpacity>
+                    </View>
+
+                    <View
+                        style={{
+                            height: 15
+                        }}
+                    ></View>
+
+                    <View
+                        style={{
+                            paddingHorizontal: SIZES.padding
+                        }}
+                    >
+                        <TouchableOpacity
+                            style={{
+                                borderRadius: SIZES.radius,
+                                padding: SIZES.base,
+                                borderWidth: 1,
+                                borderColor: COLORS.lightGray1
+                            }}
+                            onPress={() => console.log('Tes')}
+                        >
+                            <View
+                                style={{
+                                    flexDirection: 'row'
+                                }}
+                            >
+                                <TouchableOpacity
+                                    style={{
+                                        width: 40,
+                                        height: 40,
+                                        alignItems: 'center',
+                                        justifyContent: 'center',
+                                        borderRadius: SIZES.radius,
+                                        backgroundColor: COLORS.primary
+                                    }}
+                                >
+                                    <Image
+                                        source={icons.instagram}
+                                        style={{
+                                            width: 25,
+                                            height: 25,
+                                            tintColor: COLORS.white
+                                        }}
+                                    ></Image>
+                                </TouchableOpacity>
+                                <Text
+                                    style={{
+                                        color: COLORS.transparentBlack7,
+                                        flex: 1,
+                                        marginHorizontal: SIZES.font,
+                                        alignSelf: 'center',
+                                        ...FONTS.h4
+                                    }}
+                                >
+                                    <Text style={{ ...FONTS.body4 }}>
+                                        Instagram :{' '}
+                                    </Text>{' '}
+                                    Bank Sampah Indonesia
                                 </Text>
                             </View>
                         </TouchableOpacity>

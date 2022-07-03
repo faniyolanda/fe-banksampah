@@ -6,7 +6,7 @@ import {
 } from '@react-navigation/bottom-tabs';
 import Svg, { Path } from 'react-native-svg';
 
-import { Home, Cart, Transaction, Profile } from '../screens';
+import { Home, Notification, HistoryTransaction, Profile } from '../screens';
 
 import { COLORS, icons } from '../constants';
 
@@ -108,12 +108,12 @@ const Tabs = () => {
             />
 
             <Tab.Screen
-                name="Cart"
-                component={Cart}
+                name="Histori Transaksi"
+                component={HistoryTransaction}
                 options={{
                     tabBarIcon: ({ focused }) => (
                         <Image
-                            source={icons.cart}
+                            source={icons.transaction}
                             resizeMode="contain"
                             style={{
                                 width: 25,
@@ -129,12 +129,12 @@ const Tabs = () => {
             />
 
             <Tab.Screen
-                name="Transaction"
-                component={Transaction}
+                name="Notification"
+                component={Notification}
                 options={{
                     tabBarIcon: ({ focused }) => (
                         <Image
-                            source={icons.transaction}
+                            source={icons.cart}
                             resizeMode="contain"
                             style={{
                                 width: 25,

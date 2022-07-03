@@ -81,11 +81,12 @@ const Kebijakan = ({ navigation }) => {
                         }}
                     >
                         <Image
-                            icon={icons.callcenter}
+                            source={icons.banksampah}
                             style={{
                                 width: 40,
                                 height: 40,
-                                marginRight: SIZES.radius
+                                marginRight: SIZES.radius,
+                                tintColor: COLORS.primary
                             }}
                         ></Image>
                         <View

@@ -1,7 +1,8 @@
 import Home from './Home';
-import Cart from './Cart';
-import Transaction from './Transaction';
+import Notification from './Notification';
+import HistoryTransaction from './HistoryTransaction';
 import Profile from './Profile';
+import Transaction from './Transaction';
 import Login from './Login';
 import Register from './Register';
 import About from './About';
@@ -16,9 +17,10 @@ export {
     Login,
     Register,
     Home,
-    Cart,
-    Transaction,
+    Notification,
+    HistoryTransaction,
     Profile,
+    Transaction,
     About,
     Cs,
     Ketentuan,

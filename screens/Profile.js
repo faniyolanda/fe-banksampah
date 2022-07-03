@@ -14,7 +14,7 @@ const Profile = ({ navigation }) => {
     function renderHeader() {
         return (
             <Header
-                title="Profile"
+                title="Profil User"
                 containerStyle={{
                     height: 50,
                     marginHorizontal: SIZES.padding,

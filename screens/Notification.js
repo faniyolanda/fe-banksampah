@@ -3,11 +3,11 @@ import { View, Text } from 'react-native';
 import { SIZES, COLORS, icons, FONTS } from '../constants';
 import { Header, IconButton } from '../components';
 
-const Home = ({ navigation }) => {
+const Notification = ({ navigation }) => {
     function renderHeader() {
         return (
             <Header
-                title="Keranjang"
+                title="Notifikasi"
                 containerStyle={{
                     height: 50,
                     marginHorizontal: SIZES.padding,
@@ -59,7 +59,8 @@ const Home = ({ navigation }) => {
     return (
         <View
             style={{
-                flex: 1
+                flex: 1,
+                backgroundColor: COLORS.white
             }}
         >
             {renderHeader()}
@@ -67,4 +68,4 @@ const Home = ({ navigation }) => {
     );
 };
 
-export default Home;
+export default Notification;
