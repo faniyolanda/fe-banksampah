@@ -134,7 +134,7 @@ const Tabs = () => {
                 options={{
                     tabBarIcon: ({ focused }) => (
                         <Image
-                            source={icons.cart}
+                            source={icons.notification}
                             resizeMode="contain"
                             style={{
                                 width: 25,

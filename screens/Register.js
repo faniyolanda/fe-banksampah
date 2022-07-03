@@ -141,7 +141,7 @@ const Register = ({ navigation }) => {
                         onChangeText={(value) => setEmail(value)}
                     ></TextInput>
                 </View>
-                <View style={{ marginTop: 10 }}>
+                <View style={{ marginTop: 5 }}>
                     <Text
                         style={{
                             color: COLORS.gray,
@@ -163,7 +163,7 @@ const Register = ({ navigation }) => {
                     ></TextInput>
                 </View>
                 {/* Text Input Password */}
-                <View style={{ marginTop: 10 }}>
+                <View style={{ marginTop: 5 }}>
                     <Text
                         style={{
                             color: COLORS.gray,

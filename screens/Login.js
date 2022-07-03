@@ -149,7 +149,7 @@ const Login = ({ navigation }) => {
                         ></TextInput>
                     </View>
                     {/* Text Input Password */}
-                    <View style={{ marginTop: 10 }}>
+                    <View style={{ marginTop: 5 }}>
                         <Text
                             style={{
                                 color: COLORS.gray,

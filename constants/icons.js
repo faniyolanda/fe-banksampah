@@ -1,6 +1,6 @@
 const home = require('../assets/icons/home.png');
 const profile = require('../assets/icons/profile.png');
-const cart = require('../assets/icons/cart.png');
+const notification = require('../assets/icons/notification.png');
 const transaction = require('../assets/icons/transaction.png');
 const rightarrow = require('../assets/icons/rightarrow.png');
 const invite = require('../assets/icons/invite.png');
@@ -18,11 +18,14 @@ const phone = require('../assets/icons/phone.png');
 const office = require('../assets/icons/office.png');
 const facebook = require('../assets/icons/facebook.png');
 const instagram = require('../assets/icons/instagram.png');
+const penarikan = require('../assets/icons/penarikan.png');
+const name = require('../assets/icons/name.png');
+const userdefault = require('../assets/icons/userdefault.png');
 
 export default {
     home,
     profile,
-    cart,
+    notification,
     transaction,
     rightarrow,
     invite,
@@ -39,5 +42,8 @@ export default {
     phone,
     office,
     facebook,
-    instagram
+    instagram,
+    penarikan,
+    name,
+    userdefault
 };

@@ -71,7 +71,11 @@ const Home = ({ navigation }) => {
                     >
                         <Image
                             source={plant.img}
-                            style={{ flex: 1, resizeMode: 'contain' }}
+                            style={{
+                                flex: 1,
+                                tintColor: COLORS.primary,
+                                resizeMode: 'contain'
+                            }}
                         />
                     </View>
 
@@ -168,6 +172,41 @@ const Home = ({ navigation }) => {
                     />
                 </TouchableOpacity>
             </View>
+            <TouchableOpacity
+                style={{
+                    marginTop: 30,
+                    flexDirection: 'row',
+                    backgroundColor: COLORS.primary,
+                    padding: SIZES.font,
+                    borderRadius: SIZES.radius
+                }}
+                onPress={() => console.log('tes')}
+            >
+                <View
+                    style={{
+                        flex: 1
+                    }}
+                >
+                    <Text
+                        style={{
+                            color: COLORS.white,
+                            ...FONTS.body3
+                        }}
+                    >
+                        Saldo Rekening :
+                    </Text>
+                </View>
+                <View>
+                    <Text
+                        style={{
+                            color: COLORS.white,
+                            ...FONTS.h3
+                        }}
+                    >
+                        Rp. 150.000
+                    </Text>
+                </View>
+            </TouchableOpacity>
             <CategoryList />
             <FlatList
                 columnWrapperStyle={{ justifyContent: 'space-between' }}

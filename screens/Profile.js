@@ -107,15 +107,18 @@ const Profile = ({ navigation }) => {
                 >
                     <Image
                         style={{
-                            width: 100,
-                            height: 100,
+                            width: 60,
+                            height: 60,
                             borderRadius: 20,
-                            marginVertical: 10
+                            marginVertical: 10,
+                            tintColor: COLORS.primary,
+                            resizeMode: 'contain'
                         }}
-                        source={icons.profile}
+                        source={icons.userdefault}
                     ></Image>
                     <Text
                         style={{
+                            marginTop: SIZES.radius,
                             color: COLORS.primary,
                             ...FONTS.h3
                         }}
@@ -161,7 +164,71 @@ const Profile = ({ navigation }) => {
                                     alignItems: 'center',
                                     justifyContent: 'center',
                                     borderRadius: SIZES.radius,
-                                    backgroundColor: COLORS.green
+                                    backgroundColor: COLORS.primary
+                                }}
+                            >
+                                <Image
+                                    source={icons.name}
+                                    style={{
+                                        width: 25,
+                                        height: 25,
+                                        tintColor: COLORS.white
+                                    }}
+                                ></Image>
+                            </TouchableOpacity>
+                            <Text
+                                style={{
+                                    color: COLORS.transparentBlack7,
+                                    flex: 1,
+                                    marginHorizontal: SIZES.font,
+                                    alignSelf: 'center',
+                                    ...FONTS.h4
+                                }}
+                            >
+                                Edit Nama Nasabah
+                            </Text>
+                            <Image
+                                style={{
+                                    alignSelf: 'center',
+                                    tintColor: COLORS.lightGray1,
+                                    width: 12,
+                                    height: 12
+                                }}
+                                source={icons.rightarrow}
+                            />
+                        </View>
+                    </TouchableOpacity>
+
+                    <View
+                        style={{
+                            height: 15
+                        }}
+                    ></View>
+
+                    {/* Edit Password */}
+                    <TouchableOpacity
+                        style={{
+                            marginHorizontal: SIZES.padding,
+                            borderRadius: SIZES.radius,
+                            padding: SIZES.base,
+                            borderWidth: 1,
+                            borderColor: COLORS.lightGray1
+                        }}
+                        onPress={() => navigation.navigate('EditPassword')}
+                    >
+                        <View
+                            style={{
+                                flexDirection: 'row'
+                            }}
+                        >
+                            <TouchableOpacity
+                                style={{
+                                    width: 40,
+                                    height: 40,
+                                    alignItems: 'center',
+                                    justifyContent: 'center',
+                                    borderRadius: SIZES.radius,
+                                    backgroundColor: COLORS.primary
                                 }}
                             >
                                 <Image
@@ -195,6 +262,7 @@ const Profile = ({ navigation }) => {
                             />
                         </View>
                     </TouchableOpacity>
+
                     <View
                         style={{
                             height: 15
@@ -224,7 +292,71 @@ const Profile = ({ navigation }) => {
                                     alignItems: 'center',
                                     justifyContent: 'center',
                                     borderRadius: SIZES.radius,
-                                    backgroundColor: COLORS.green
+                                    backgroundColor: COLORS.primary
+                                }}
+                            >
+                                <Image
+                                    source={icons.penarikan}
+                                    style={{
+                                        width: 25,
+                                        height: 25,
+                                        tintColor: COLORS.white
+                                    }}
+                                ></Image>
+                            </TouchableOpacity>
+                            <Text
+                                style={{
+                                    color: COLORS.transparentBlack7,
+                                    flex: 1,
+                                    marginHorizontal: SIZES.font,
+                                    alignSelf: 'center',
+                                    ...FONTS.h4
+                                }}
+                            >
+                                Riwayat Penarikan
+                            </Text>
+                            <Image
+                                style={{
+                                    alignSelf: 'center',
+                                    tintColor: COLORS.lightGray1,
+                                    width: 12,
+                                    height: 12
+                                }}
+                                source={icons.rightarrow}
+                            />
+                        </View>
+                    </TouchableOpacity>
+
+                    <View
+                        style={{
+                            height: 15
+                        }}
+                    ></View>
+
+                    {/* Undang Teman */}
+                    <TouchableOpacity
+                        style={{
+                            marginHorizontal: SIZES.padding,
+                            borderRadius: SIZES.radius,
+                            padding: SIZES.base,
+                            borderWidth: 1,
+                            borderColor: COLORS.lightGray1
+                        }}
+                        onPress={() => onShare()}
+                    >
+                        <View
+                            style={{
+                                flexDirection: 'row'
+                            }}
+                        >
+                            <TouchableOpacity
+                                style={{
+                                    width: 40,
+                                    height: 40,
+                                    alignItems: 'center',
+                                    justifyContent: 'center',
+                                    borderRadius: SIZES.radius,
+                                    backgroundColor: COLORS.primary
                                 }}
                             >
                                 <Image
@@ -258,6 +390,7 @@ const Profile = ({ navigation }) => {
                             />
                         </View>
                     </TouchableOpacity>
+
                     <View
                         style={{
                             height: 10
@@ -297,7 +430,7 @@ const Profile = ({ navigation }) => {
                                     alignItems: 'center',
                                     justifyContent: 'center',
                                     borderRadius: SIZES.radius,
-                                    backgroundColor: COLORS.green
+                                    backgroundColor: COLORS.primary
                                 }}
                             >
                                 <Image
@@ -360,7 +493,7 @@ const Profile = ({ navigation }) => {
                                     alignItems: 'center',
                                     justifyContent: 'center',
                                     borderRadius: SIZES.radius,
-                                    backgroundColor: COLORS.green
+                                    backgroundColor: COLORS.primary
                                 }}
                             >
                                 <Image
@@ -423,7 +556,7 @@ const Profile = ({ navigation }) => {
                                     alignItems: 'center',
                                     justifyContent: 'center',
                                     borderRadius: SIZES.radius,
-                                    backgroundColor: COLORS.green
+                                    backgroundColor: COLORS.primary
                                 }}
                             >
                                 <Image
@@ -486,7 +619,7 @@ const Profile = ({ navigation }) => {
                                     alignItems: 'center',
                                     justifyContent: 'center',
                                     borderRadius: SIZES.radius,
-                                    backgroundColor: COLORS.green
+                                    backgroundColor: COLORS.primary
                                 }}
                             >
                                 <Image
