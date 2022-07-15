@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text } from 'react-native';
+import { View, Text, StatusBar } from 'react-native';
 import { SIZES, COLORS, icons, FONTS } from '../constants';
 import { Header, IconButton } from '../components';
 
@@ -50,21 +50,30 @@ const Notification = ({ navigation }) => {
                             height: 20,
                             tintColor: COLORS.gray2
                         }}
-                        onPress={() => navigation.navigate('HelpCenter')}
+                        onPress={() => navigation.navigate('Cs')}
                     ></IconButton>
                 }
             ></Header>
         );
     }
+
+    const notificationItem = () => {
+        return <View></View>;
+    };
     return (
-        <View
-            style={{
-                flex: 1,
-                backgroundColor: COLORS.white
-            }}
-        >
-            {renderHeader()}
-        </View>
+        <>
+            <StatusBar barStyle="dark-content" backgroundColor="#ffffff" />
+            <View
+                style={{
+                    flex: 1,
+                    backgroundColor: COLORS.white
+                }}
+            >
+                {renderHeader()}
+
+                {notificationItem()}
+            </View>
+        </>
     );
 };
 

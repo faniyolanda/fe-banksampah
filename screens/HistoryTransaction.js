@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, Image } from 'react-native';
+import { View, Text, Image, StatusBar } from 'react-native';
 import { SIZES, COLORS, icons, FONTS } from '../constants';
 import { Header, IconButton, TextButton } from '../components';
 import { ScrollView } from 'react-native-gesture-handler';
@@ -51,7 +51,7 @@ const HistoryTransaction = ({ navigation }) => {
                             height: 20,
                             tintColor: COLORS.gray2
                         }}
-                        onPress={() => navigation.navigate('HelpCenter')}
+                        onPress={() => navigation.navigate('Cs')}
                     ></IconButton>
                 }
             ></Header>
@@ -146,21 +146,25 @@ const HistoryTransaction = ({ navigation }) => {
     }
 
     return (
-        <View
-        style={{
-            flex: 1,
-            backgroundColor: COLORS.white
-        }}
-    >
-        {renderHeader()}
-        <ScrollView>
-            {renderItem()}
-            {renderItem()}
-            {renderItem()}
-            {renderItem()}
-            {renderItem()}
-        </ScrollView>
-    </View>
+        <>
+            <StatusBar barStyle="dark-content" backgroundColor="#ffffff" />
+
+            <View
+                style={{
+                    flex: 1,
+                    backgroundColor: COLORS.white
+                }}
+            >
+                {renderHeader()}
+                <ScrollView>
+                    {renderItem()}
+                    {renderItem()}
+                    {renderItem()}
+                    {renderItem()}
+                    {renderItem()}
+                </ScrollView>
+            </View>
+        </>
     );
 };
 

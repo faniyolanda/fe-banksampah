@@ -19,7 +19,8 @@ import {
     Kebijakan,
     Ketentuan,
     EditPassword,
-    Detail
+    Detail,
+    DetailHistoryTransaction
 } from './screens';
 
 const Stack = createNativeStackNavigator();
@@ -31,7 +32,7 @@ function App() {
                 screenOptions={{
                     headerShown: false
                 }}
-                initialRouteName={'Tabs'}
+                initialRouteName={'Login'}
             >
                 <Stack.Screen name="Tabs" component={Tabs} />
                 <Stack.Screen name="Home" component={Home} />
@@ -51,6 +52,10 @@ function App() {
                 <Stack.Screen name="UndangTeman" component={UndangTeman} />
                 <Stack.Screen name="EditPassword" component={EditPassword} />
                 <Stack.Screen name="Detail" component={Detail} />
+                <Stack.Screen
+                    name="DetailHistoryTransaction"
+                    component={DetailHistoryTransaction}
+                />
             </Stack.Navigator>
         </NavigationContainer>
     );

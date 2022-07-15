@@ -4,7 +4,7 @@ import { SIZES, COLORS, icons, FONTS } from '../constants';
 import { Header, IconButton, TextButton } from '../components';
 import { ScrollView } from 'react-native-gesture-handler';
 
-const Home = ({ navigation }) => {
+const Transaction = ({ navigation }) => {
     function renderHeader() {
         return (
             <Header
@@ -58,108 +58,133 @@ const Home = ({ navigation }) => {
         );
     }
 
-    function renderItem() {
-        return (
-            <View
-                style={{
-                    height: 150,
-                    marginHorizontal: SIZES.padding,
-                    marginVertical: 10,
-                    borderRadius: SIZES.radius,
-                    borderWidth: 1,
-                    borderColor: COLORS.lightGray1,
-                    padding: SIZES.radius
-                }}
-            >
-                <View
-                    style={{
-                        flexDirection: 'column',
-                        flex: 1
-                    }}
-                >
-                    <View
-                        style={{
-                            flex: 1
-                        }}
-                    >
-                        <Text
-                            style={{
-                                ...FONTS.h4
-                            }}
-                        >
-                            17 Jun 2022
-                        </Text>
-                    </View>
-                    <View
-                        style={{
-                            flex: 1,
-                            flexDirection: 'row'
-                        }}
-                    >
-                        <Text
-                            style={{
-                                flex: 1,
-                                ...FONTS.body4
-                            }}
-                        >
-                            Total Deposit
-                        </Text>
-                        <Text
-                            style={{
-                                ...FONTS.h4
-                            }}
-                        >
-                            Rp. 20.000
-                        </Text>
-                    </View>
-                    <View
-                        style={{
-                            flexDirection: 'row',
-                            flex: 1
-                        }}
-                    >
-                        <Text
-                            style={{
-                                flex: 1,
-                                alignSelf: 'center',
-                                ...FONTS.h4
-                            }}
-                        >
-                            SUKSES
-                        </Text>
-                        <View style={{ flex: 1 }}>
-                            <TextButton
-                                buttonContainerStyle={{
-                                    borderRadius: SIZES.radius,
-                                    backgroundColor: COLORS.primary,
-                                    paddingHorizontal: 50,
-                                    paddingVertical: SIZES.radius
-                                }}
-                                label="Detail"
-                                onPress={() => navigation.navigate('Login')}
-                            ></TextButton>
-                        </View>
-                    </View>
-                </View>
-            </View>
-        );
-    }
     return (
         <View
             style={{
-                flex: 1
+                flex: 1,
+                backgroundColor: 'white'
             }}
         >
             {renderHeader()}
             <ScrollView>
-                {renderItem()}
-                {renderItem()}
-                {renderItem()}
-                {renderItem()}
-                {renderItem()}
+                <View
+                    style={{
+                        height: 70,
+                        backgroundColor: 'green',
+                        flexDirection: 'row',
+                        marginHorizontal: 20
+                    }}
+                >
+                    <View
+                        style={{
+                            flex: 1,
+                            backgroundColor: 'yellow'
+                        }}
+                    ></View>
+                    <View
+                        style={{
+                            flex: 1,
+                            backgroundColor: 'blue'
+                        }}
+                    ></View>
+                    <View
+                        style={{
+                            flex: 1,
+                            backgroundColor: 'purple'
+                        }}
+                    ></View>
+                </View>
+
+                {/* kedua */}
+                <View
+                    style={{
+                        height: 150,
+                        backgroundColor: 'green',
+                        marginTop: 20,
+                        marginHorizontal: 20,
+                        flexDirection: 'column'
+                    }}
+                >
+                    <View
+                        style={{
+                            flex: 1,
+                            backgroundColor: 'grey',
+                            flexDirection: 'row'
+                        }}
+                    >
+                        <View
+                            style={{
+                                flex: 1,
+                                backgroundColor: 'blue'
+                            }}
+                        ></View>
+                        <View
+                            style={{
+                                flex: 1,
+                                backgroundColor: 'pink'
+                            }}
+                        ></View>
+                    </View>
+                    <View
+                        style={{
+                            flex: 1,
+                            backgroundColor: 'red'
+                        }}
+                    ></View>
+                    <View
+                        style={{
+                            flex: 1,
+                            backgroundColor: 'pink'
+                        }}
+                    ></View>
+                </View>
+                <View
+                    style={{
+                        height: 100,
+                        backgroundColor: 'green',
+                        marginTop: 20,
+                        marginHorizontal: 20,
+                        borderRadius: 10
+                    }}
+                ></View>
+                <View
+                    style={{
+                        height: 150,
+                        backgroundColor: 'pink',
+                        marginTop: 20,
+                        marginHorizontal: 20,
+                        borderRadius: 10,
+                        flexDirection: 'column'
+                    }}
+                >
+                    <View
+                        style={{
+                            flex: 1,
+                            backgroundColor: 'yellow'
+                        }}
+                    ></View>
+                    <View
+                        style={{
+                            flex: 1,
+                            backgroundColor: 'green'
+                        }}
+                    ></View>
+                    <View
+                        style={{
+                            flex: 1,
+                            backgroundColor: 'pink'
+                        }}
+                    ></View>
+                    <View
+                        style={{
+                            flex: 1,
+                            backgroundColor: 'orange'
+                        }}
+                    ></View>
+                </View>
             </ScrollView>
         </View>
     );
 };
 
-export default Home;
+export default Transaction;

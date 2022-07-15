@@ -28,6 +28,7 @@ export const COLORS = {
     transparentBlack5: 'rgba(0, 0, 0, 0.5)',
     transparentBlack7: 'rgba(0, 0, 0, 0.7)'
 };
+
 export const SIZES = {
     // global sizes
     base: 8,
@@ -53,6 +54,7 @@ export const SIZES = {
     width,
     height
 };
+
 export const FONTS = {
     largeTitle: { fontFamily: 'Poppins-Black', fontSize: SIZES.largeTitle },
     h1: { fontFamily: 'Poppins-Bold', fontSize: SIZES.h1, lineHeight: 36 },

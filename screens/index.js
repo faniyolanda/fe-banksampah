@@ -12,6 +12,7 @@ import Kebijakan from './Kebijakan';
 import UndangTeman from './UndangTeman';
 import EditPassword from './EditPassword';
 import Detail from './Detail';
+import DetailHistoryTransaction from './DetailHistoryTransaction';
 
 export {
     Login,
@@ -27,5 +28,6 @@ export {
     Kebijakan,
     UndangTeman,
     EditPassword,
-    Detail
+    Detail,
+    DetailHistoryTransaction
 };

@@ -8,7 +8,8 @@ import {
     Image,
     Dimensions,
     TouchableOpacity,
-    TextInput
+    TextInput,
+    StatusBar
 } from 'react-native';
 import { SIZES, COLORS, icons, FONTS } from '../constants';
 const width = Dimensions.get('window').width / 2 - 30;
@@ -29,7 +30,7 @@ const Home = ({ navigation }) => {
                         fontWeight: 'bold'
                     }}
                 >
-                    Rekomendasi
+                    Kategori Sampah
                 </Text>
             </View>
         );
@@ -125,103 +126,107 @@ const Home = ({ navigation }) => {
     };
 
     return (
-        <SafeAreaView
-            style={{
-                flex: 1,
-                paddingHorizontal: 20,
-                backgroundColor: COLORS.white
-            }}
-        >
-            <View style={style.header}>
-                <View>
-                    <Text style={{ fontSize: 25, fontWeight: 'bold' }}>
-                        Welcome to
-                    </Text>
-                    <Text
-                        style={{
-                            fontSize: 38,
-                            color: COLORS.green,
-                            fontWeight: 'bold'
-                        }}
-                    >
-                        Bank Sampah
-                    </Text>
-                </View>
-            </View>
-            <View style={{ marginTop: 30, flexDirection: 'row' }}>
-                <View style={style.searchContainer}>
-                    <Image
-                        style={{
-                            marginLeft: 20,
-                            tintColor: COLORS.lightGray1,
-                            width: 25,
-                            height: 25
-                        }}
-                        source={icons.search}
-                    />
-                    <TextInput placeholder="Search" style={style.input} />
-                </View>
-                <TouchableOpacity style={style.sortBtn}>
-                    <Image
-                        style={{
-                            tintColor: COLORS.lightGray1,
-                            width: 25,
-                            height: 25
-                        }}
-                        source={icons.filter}
-                    />
-                </TouchableOpacity>
-            </View>
-            <TouchableOpacity
+        <>
+            <StatusBar barStyle="dark-content" backgroundColor="#ffffff" />
+
+            <SafeAreaView
                 style={{
-                    marginTop: 30,
-                    flexDirection: 'row',
-                    backgroundColor: COLORS.primary,
-                    padding: SIZES.font,
-                    borderRadius: SIZES.radius
+                    flex: 1,
+                    paddingHorizontal: 20,
+                    backgroundColor: COLORS.white
                 }}
-                onPress={() => console.log('tes')}
             >
-                <View
+                <View style={style.header}>
+                    <View>
+                        <Text style={{ fontSize: 25, fontWeight: 'bold' }}>
+                            Welcome to
+                        </Text>
+                        <Text
+                            style={{
+                                fontSize: 38,
+                                color: COLORS.green,
+                                fontWeight: 'bold'
+                            }}
+                        >
+                            Bank Sampah
+                        </Text>
+                    </View>
+                </View>
+                <View style={{ marginTop: 30, flexDirection: 'row' }}>
+                    <View style={style.searchContainer}>
+                        <Image
+                            style={{
+                                marginLeft: 20,
+                                tintColor: COLORS.lightGray1,
+                                width: 25,
+                                height: 25
+                            }}
+                            source={icons.search}
+                        />
+                        <TextInput placeholder="Search" style={style.input} />
+                    </View>
+                    <TouchableOpacity style={style.sortBtn}>
+                        <Image
+                            style={{
+                                tintColor: COLORS.lightGray1,
+                                width: 25,
+                                height: 25
+                            }}
+                            source={icons.filter}
+                        />
+                    </TouchableOpacity>
+                </View>
+                <TouchableOpacity
                     style={{
-                        flex: 1
+                        marginTop: 30,
+                        flexDirection: 'row',
+                        backgroundColor: COLORS.primary,
+                        padding: SIZES.font,
+                        borderRadius: SIZES.radius
                     }}
+                    onPress={() => console.log('tes')}
                 >
-                    <Text
+                    <View
                         style={{
-                            color: COLORS.white,
-                            ...FONTS.body3
+                            flex: 1
                         }}
                     >
-                        Saldo Rekening :
-                    </Text>
-                </View>
-                <View>
-                    <Text
-                        style={{
-                            color: COLORS.white,
-                            ...FONTS.h3
-                        }}
-                    >
-                        Rp. 150.000
-                    </Text>
-                </View>
-            </TouchableOpacity>
-            <CategoryList />
-            <FlatList
-                columnWrapperStyle={{ justifyContent: 'space-between' }}
-                showsVerticalScrollIndicator={false}
-                contentContainerStyle={{
-                    marginTop: 10,
-                    paddingBottom: 50
-                }}
-                numColumns={2}
-                data={plants}
-                renderItem={({ item }) => {
-                    return <Card plant={item} />;
-                }}
-            />
-        </SafeAreaView>
+                        <Text
+                            style={{
+                                color: COLORS.white,
+                                ...FONTS.body3
+                            }}
+                        >
+                            Saldo Rekening :
+                        </Text>
+                    </View>
+                    <View>
+                        <Text
+                            style={{
+                                color: COLORS.white,
+                                ...FONTS.h3
+                            }}
+                        >
+                            Rp. 150.000
+                        </Text>
+                    </View>
+                </TouchableOpacity>
+                <CategoryList />
+                <FlatList
+                    columnWrapperStyle={{ justifyContent: 'space-between' }}
+                    showsVerticalScrollIndicator={false}
+                    contentContainerStyle={{
+                        marginTop: 10,
+                        paddingBottom: 50
+                    }}
+                    numColumns={2}
+                    data={plants}
+                    renderItem={({ item }) => {
+                        return <Card plant={item} />;
+                    }}
+                />
+            </SafeAreaView>
+        </>
     );
 };
 

@@ -15,7 +15,7 @@ const Login = ({ navigation }) => {
 
     function signin() {
         try {
-            fetch('http://192.168.1.9/be-banksampah/public/api/login', {
+            fetch('http://10.234.183.19/be-banksampah/public/api/login', {
                 method: 'POST',
                 headers: {
                     Accept: 'application/json',
@@ -29,8 +29,7 @@ const Login = ({ navigation }) => {
                 .then((response) => response.json())
                 .then((json) => {
                     if (json.success == true) {
-                        console.log('Aku bisaaaa yeyy');
-                        navigation.navigate('MainLayout');
+                        navigation.navigate('Transaction');
                     } else {
                         console.log('Nice Try');
                     }

@@ -5,7 +5,8 @@ import {
     ScrollView,
     TouchableOpacity,
     Image,
-    Share
+    Share,
+    StatusBar
 } from 'react-native';
 import { SIZES, COLORS, icons, FONTS } from '../constants';
 import { TextButton, Header, IconButton } from '../components';
@@ -57,7 +58,7 @@ const Profile = ({ navigation }) => {
                             height: 20,
                             tintColor: COLORS.gray2
                         }}
-                        onPress={() => navigation.navigate('HelpCenter')}
+                        onPress={() => navigation.navigate('Cs')}
                     ></IconButton>
                 }
             ></Header>
@@ -85,596 +86,599 @@ const Profile = ({ navigation }) => {
     };
 
     return (
-        <View
-            style={{
-                flex: 1,
-                backgroundColor: COLORS.white
-            }}
-        >
-            {renderHeader()}
-
-            <ScrollView
+        <>
+            <StatusBar barStyle="dark-content" backgroundColor="#ffffff" />
+            <View
                 style={{
-                    flex: 1
+                    flex: 1,
+                    backgroundColor: COLORS.white
                 }}
             >
-                <View
+                {renderHeader()}
+
+                <ScrollView
                     style={{
-                        alignItems: 'center',
-                        marginTop: 10,
-                        marginBottom: 10
+                        flex: 1
                     }}
                 >
-                    <Image
-                        style={{
-                            width: 60,
-                            height: 60,
-                            borderRadius: 20,
-                            marginVertical: 10,
-                            tintColor: COLORS.primary,
-                            resizeMode: 'contain'
-                        }}
-                        source={icons.userdefault}
-                    ></Image>
-                    <Text
-                        style={{
-                            marginTop: SIZES.radius,
-                            color: COLORS.primary,
-                            ...FONTS.h3
-                        }}
-                    >
-                        Fani Yolanda
-                    </Text>
-                    <Text
-                        style={{
-                            color: COLORS.black,
-                            ...FONTS.body4
-                        }}
-                    >
-                        faniyolanda0814@gmail.com
-                    </Text>
-                </View>
-                <View
-                    style={{
-                        flexDirection: 'column',
-                        marginTop: SIZES.padding,
-                        marginBottom: 10
-                    }}
-                >
-                    {/* Edit Password */}
-                    <TouchableOpacity
-                        style={{
-                            marginHorizontal: SIZES.padding,
-                            borderRadius: SIZES.radius,
-                            padding: SIZES.base,
-                            borderWidth: 1,
-                            borderColor: COLORS.lightGray1
-                        }}
-                        onPress={() => navigation.navigate('EditPassword')}
-                    >
-                        <View
-                            style={{
-                                flexDirection: 'row'
-                            }}
-                        >
-                            <TouchableOpacity
-                                style={{
-                                    width: 40,
-                                    height: 40,
-                                    alignItems: 'center',
-                                    justifyContent: 'center',
-                                    borderRadius: SIZES.radius,
-                                    backgroundColor: COLORS.primary
-                                }}
-                            >
-                                <Image
-                                    source={icons.name}
-                                    style={{
-                                        width: 25,
-                                        height: 25,
-                                        tintColor: COLORS.white
-                                    }}
-                                ></Image>
-                            </TouchableOpacity>
-                            <Text
-                                style={{
-                                    color: COLORS.transparentBlack7,
-                                    flex: 1,
-                                    marginHorizontal: SIZES.font,
-                                    alignSelf: 'center',
-                                    ...FONTS.h4
-                                }}
-                            >
-                                Edit Nama Nasabah
-                            </Text>
-                            <Image
-                                style={{
-                                    alignSelf: 'center',
-                                    tintColor: COLORS.lightGray1,
-                                    width: 12,
-                                    height: 12
-                                }}
-                                source={icons.rightarrow}
-                            />
-                        </View>
-                    </TouchableOpacity>
-
                     <View
                         style={{
-                            height: 15
+                            alignItems: 'center',
+                            marginTop: 10,
+                            marginBottom: 10
                         }}
-                    ></View>
-
-                    {/* Edit Password */}
-                    <TouchableOpacity
-                        style={{
-                            marginHorizontal: SIZES.padding,
-                            borderRadius: SIZES.radius,
-                            padding: SIZES.base,
-                            borderWidth: 1,
-                            borderColor: COLORS.lightGray1
-                        }}
-                        onPress={() => navigation.navigate('EditPassword')}
                     >
-                        <View
+                        <Image
                             style={{
-                                flexDirection: 'row'
+                                width: 60,
+                                height: 60,
+                                borderRadius: 20,
+                                marginVertical: 10,
+                                tintColor: COLORS.primary,
+                                resizeMode: 'contain'
+                            }}
+                            source={icons.userdefault}
+                        ></Image>
+                        <Text
+                            style={{
+                                marginTop: SIZES.radius,
+                                color: COLORS.primary,
+                                ...FONTS.h3
                             }}
                         >
-                            <TouchableOpacity
-                                style={{
-                                    width: 40,
-                                    height: 40,
-                                    alignItems: 'center',
-                                    justifyContent: 'center',
-                                    borderRadius: SIZES.radius,
-                                    backgroundColor: COLORS.primary
-                                }}
-                            >
-                                <Image
-                                    source={icons.password}
-                                    style={{
-                                        width: 25,
-                                        height: 25,
-                                        tintColor: COLORS.white
-                                    }}
-                                ></Image>
-                            </TouchableOpacity>
-                            <Text
-                                style={{
-                                    color: COLORS.transparentBlack7,
-                                    flex: 1,
-                                    marginHorizontal: SIZES.font,
-                                    alignSelf: 'center',
-                                    ...FONTS.h4
-                                }}
-                            >
-                                Edit Password
-                            </Text>
-                            <Image
-                                style={{
-                                    alignSelf: 'center',
-                                    tintColor: COLORS.lightGray1,
-                                    width: 12,
-                                    height: 12
-                                }}
-                                source={icons.rightarrow}
-                            />
-                        </View>
-                    </TouchableOpacity>
-
+                            Fani Yolanda
+                        </Text>
+                        <Text
+                            style={{
+                                color: COLORS.black,
+                                ...FONTS.body4
+                            }}
+                        >
+                            faniyolanda0814@gmail.com
+                        </Text>
+                    </View>
                     <View
                         style={{
-                            height: 15
+                            flexDirection: 'column',
+                            marginTop: SIZES.padding,
+                            marginBottom: 10
                         }}
-                    ></View>
-
-                    {/* Undang Teman */}
-                    <TouchableOpacity
-                        style={{
-                            marginHorizontal: SIZES.padding,
-                            borderRadius: SIZES.radius,
-                            padding: SIZES.base,
-                            borderWidth: 1,
-                            borderColor: COLORS.lightGray1
-                        }}
-                        onPress={() => onShare()}
                     >
+                        {/* Edit Password */}
+                        <TouchableOpacity
+                            style={{
+                                marginHorizontal: SIZES.padding,
+                                borderRadius: SIZES.radius,
+                                padding: SIZES.base,
+                                borderWidth: 1,
+                                borderColor: COLORS.lightGray1
+                            }}
+                            onPress={() => navigation.navigate('EditPassword')}
+                        >
+                            <View
+                                style={{
+                                    flexDirection: 'row'
+                                }}
+                            >
+                                <TouchableOpacity
+                                    style={{
+                                        width: 40,
+                                        height: 40,
+                                        alignItems: 'center',
+                                        justifyContent: 'center',
+                                        borderRadius: SIZES.radius,
+                                        backgroundColor: COLORS.primary
+                                    }}
+                                >
+                                    <Image
+                                        source={icons.name}
+                                        style={{
+                                            width: 25,
+                                            height: 25,
+                                            tintColor: COLORS.white
+                                        }}
+                                    ></Image>
+                                </TouchableOpacity>
+                                <Text
+                                    style={{
+                                        color: COLORS.transparentBlack7,
+                                        flex: 1,
+                                        marginHorizontal: SIZES.font,
+                                        alignSelf: 'center',
+                                        ...FONTS.h4
+                                    }}
+                                >
+                                    Edit Nama Nasabah
+                                </Text>
+                                <Image
+                                    style={{
+                                        alignSelf: 'center',
+                                        tintColor: COLORS.lightGray1,
+                                        width: 12,
+                                        height: 12
+                                    }}
+                                    source={icons.rightarrow}
+                                />
+                            </View>
+                        </TouchableOpacity>
+
                         <View
                             style={{
-                                flexDirection: 'row'
+                                height: 15
+                            }}
+                        ></View>
+
+                        {/* Edit Password */}
+                        <TouchableOpacity
+                            style={{
+                                marginHorizontal: SIZES.padding,
+                                borderRadius: SIZES.radius,
+                                padding: SIZES.base,
+                                borderWidth: 1,
+                                borderColor: COLORS.lightGray1
+                            }}
+                            onPress={() => navigation.navigate('EditPassword')}
+                        >
+                            <View
+                                style={{
+                                    flexDirection: 'row'
+                                }}
+                            >
+                                <TouchableOpacity
+                                    style={{
+                                        width: 40,
+                                        height: 40,
+                                        alignItems: 'center',
+                                        justifyContent: 'center',
+                                        borderRadius: SIZES.radius,
+                                        backgroundColor: COLORS.primary
+                                    }}
+                                >
+                                    <Image
+                                        source={icons.password}
+                                        style={{
+                                            width: 25,
+                                            height: 25,
+                                            tintColor: COLORS.white
+                                        }}
+                                    ></Image>
+                                </TouchableOpacity>
+                                <Text
+                                    style={{
+                                        color: COLORS.transparentBlack7,
+                                        flex: 1,
+                                        marginHorizontal: SIZES.font,
+                                        alignSelf: 'center',
+                                        ...FONTS.h4
+                                    }}
+                                >
+                                    Edit Password
+                                </Text>
+                                <Image
+                                    style={{
+                                        alignSelf: 'center',
+                                        tintColor: COLORS.lightGray1,
+                                        width: 12,
+                                        height: 12
+                                    }}
+                                    source={icons.rightarrow}
+                                />
+                            </View>
+                        </TouchableOpacity>
+
+                        <View
+                            style={{
+                                height: 15
+                            }}
+                        ></View>
+
+                        {/* Undang Teman */}
+                        <TouchableOpacity
+                            style={{
+                                marginHorizontal: SIZES.padding,
+                                borderRadius: SIZES.radius,
+                                padding: SIZES.base,
+                                borderWidth: 1,
+                                borderColor: COLORS.lightGray1
+                            }}
+                            onPress={() => onShare()}
+                        >
+                            <View
+                                style={{
+                                    flexDirection: 'row'
+                                }}
+                            >
+                                <TouchableOpacity
+                                    style={{
+                                        width: 40,
+                                        height: 40,
+                                        alignItems: 'center',
+                                        justifyContent: 'center',
+                                        borderRadius: SIZES.radius,
+                                        backgroundColor: COLORS.primary
+                                    }}
+                                >
+                                    <Image
+                                        source={icons.penarikan}
+                                        style={{
+                                            width: 25,
+                                            height: 25,
+                                            tintColor: COLORS.white
+                                        }}
+                                    ></Image>
+                                </TouchableOpacity>
+                                <Text
+                                    style={{
+                                        color: COLORS.transparentBlack7,
+                                        flex: 1,
+                                        marginHorizontal: SIZES.font,
+                                        alignSelf: 'center',
+                                        ...FONTS.h4
+                                    }}
+                                >
+                                    Riwayat Penarikan
+                                </Text>
+                                <Image
+                                    style={{
+                                        alignSelf: 'center',
+                                        tintColor: COLORS.lightGray1,
+                                        width: 12,
+                                        height: 12
+                                    }}
+                                    source={icons.rightarrow}
+                                />
+                            </View>
+                        </TouchableOpacity>
+
+                        <View
+                            style={{
+                                height: 15
+                            }}
+                        ></View>
+
+                        {/* Undang Teman */}
+                        <TouchableOpacity
+                            style={{
+                                marginHorizontal: SIZES.padding,
+                                borderRadius: SIZES.radius,
+                                padding: SIZES.base,
+                                borderWidth: 1,
+                                borderColor: COLORS.lightGray1
+                            }}
+                            onPress={() => onShare()}
+                        >
+                            <View
+                                style={{
+                                    flexDirection: 'row'
+                                }}
+                            >
+                                <TouchableOpacity
+                                    style={{
+                                        width: 40,
+                                        height: 40,
+                                        alignItems: 'center',
+                                        justifyContent: 'center',
+                                        borderRadius: SIZES.radius,
+                                        backgroundColor: COLORS.primary
+                                    }}
+                                >
+                                    <Image
+                                        source={icons.invite}
+                                        style={{
+                                            width: 25,
+                                            height: 25,
+                                            tintColor: COLORS.white
+                                        }}
+                                    ></Image>
+                                </TouchableOpacity>
+                                <Text
+                                    style={{
+                                        color: COLORS.transparentBlack7,
+                                        flex: 1,
+                                        marginHorizontal: SIZES.font,
+                                        alignSelf: 'center',
+                                        ...FONTS.h4
+                                    }}
+                                >
+                                    Undang Teman
+                                </Text>
+                                <Image
+                                    style={{
+                                        alignSelf: 'center',
+                                        tintColor: COLORS.lightGray1,
+                                        width: 12,
+                                        height: 12
+                                    }}
+                                    source={icons.rightarrow}
+                                />
+                            </View>
+                        </TouchableOpacity>
+
+                        <View
+                            style={{
+                                height: 10
+                            }}
+                        ></View>
+                        <Text
+                            style={{
+                                color: COLORS.transparentBlack7,
+                                ...FONTS.h4,
+                                marginHorizontal: SIZES.padding,
+                                marginVertical: SIZES.padding
                             }}
                         >
-                            <TouchableOpacity
-                                style={{
-                                    width: 40,
-                                    height: 40,
-                                    alignItems: 'center',
-                                    justifyContent: 'center',
-                                    borderRadius: SIZES.radius,
-                                    backgroundColor: COLORS.primary
-                                }}
-                            >
-                                <Image
-                                    source={icons.penarikan}
-                                    style={{
-                                        width: 25,
-                                        height: 25,
-                                        tintColor: COLORS.white
-                                    }}
-                                ></Image>
-                            </TouchableOpacity>
-                            <Text
-                                style={{
-                                    color: COLORS.transparentBlack7,
-                                    flex: 1,
-                                    marginHorizontal: SIZES.font,
-                                    alignSelf: 'center',
-                                    ...FONTS.h4
-                                }}
-                            >
-                                Riwayat Penarikan
-                            </Text>
-                            <Image
-                                style={{
-                                    alignSelf: 'center',
-                                    tintColor: COLORS.lightGray1,
-                                    width: 12,
-                                    height: 12
-                                }}
-                                source={icons.rightarrow}
-                            />
-                        </View>
-                    </TouchableOpacity>
+                            Info Lainnya
+                        </Text>
 
+                        {/* Kebijakan Privacy */}
+                        <TouchableOpacity
+                            style={{
+                                marginHorizontal: SIZES.padding,
+                                borderRadius: SIZES.radius,
+                                padding: SIZES.base,
+                                borderWidth: 1,
+                                borderColor: COLORS.lightGray1
+                            }}
+                            onPress={() => navigation.navigate('Kebijakan')}
+                        >
+                            <View
+                                style={{
+                                    flexDirection: 'row'
+                                }}
+                            >
+                                <TouchableOpacity
+                                    style={{
+                                        width: 40,
+                                        height: 40,
+                                        alignItems: 'center',
+                                        justifyContent: 'center',
+                                        borderRadius: SIZES.radius,
+                                        backgroundColor: COLORS.primary
+                                    }}
+                                >
+                                    <Image
+                                        source={icons.privacypolice}
+                                        style={{
+                                            width: 25,
+                                            height: 25,
+                                            tintColor: COLORS.white
+                                        }}
+                                    ></Image>
+                                </TouchableOpacity>
+                                <Text
+                                    style={{
+                                        color: COLORS.transparentBlack7,
+                                        flex: 1,
+                                        marginHorizontal: SIZES.font,
+                                        alignSelf: 'center',
+                                        ...FONTS.h4
+                                    }}
+                                >
+                                    Kebijakan Privasi
+                                </Text>
+                                <Image
+                                    style={{
+                                        alignSelf: 'center',
+                                        tintColor: COLORS.lightGray1,
+                                        width: 12,
+                                        height: 12
+                                    }}
+                                    source={icons.rightarrow}
+                                />
+                            </View>
+                        </TouchableOpacity>
+                        <View
+                            style={{
+                                height: 15
+                            }}
+                        ></View>
+
+                        {/* Ketentuan Layanan */}
+                        <TouchableOpacity
+                            style={{
+                                marginHorizontal: SIZES.padding,
+                                borderRadius: SIZES.radius,
+                                padding: SIZES.base,
+                                borderWidth: 1,
+                                borderColor: COLORS.lightGray1
+                            }}
+                            onPress={() => navigation.navigate('Ketentuan')}
+                        >
+                            <View
+                                style={{
+                                    flexDirection: 'row'
+                                }}
+                            >
+                                <TouchableOpacity
+                                    style={{
+                                        width: 40,
+                                        height: 40,
+                                        alignItems: 'center',
+                                        justifyContent: 'center',
+                                        borderRadius: SIZES.radius,
+                                        backgroundColor: COLORS.primary
+                                    }}
+                                >
+                                    <Image
+                                        source={icons.policyterm}
+                                        style={{
+                                            width: 25,
+                                            height: 25,
+                                            tintColor: COLORS.white
+                                        }}
+                                    ></Image>
+                                </TouchableOpacity>
+                                <Text
+                                    style={{
+                                        color: COLORS.transparentBlack7,
+                                        flex: 1,
+                                        marginHorizontal: SIZES.font,
+                                        alignSelf: 'center',
+                                        ...FONTS.h4
+                                    }}
+                                >
+                                    Ketentuan Layanan
+                                </Text>
+                                <Image
+                                    style={{
+                                        alignSelf: 'center',
+                                        tintColor: COLORS.lightGray1,
+                                        width: 12,
+                                        height: 12
+                                    }}
+                                    source={icons.rightarrow}
+                                />
+                            </View>
+                        </TouchableOpacity>
+                        <View
+                            style={{
+                                height: 15
+                            }}
+                        ></View>
+
+                        {/* Customer Service */}
+                        <TouchableOpacity
+                            style={{
+                                marginHorizontal: SIZES.padding,
+                                borderRadius: SIZES.radius,
+                                padding: SIZES.base,
+                                borderWidth: 1,
+                                borderColor: COLORS.lightGray1
+                            }}
+                            onPress={() => navigation.navigate('Cs')}
+                        >
+                            <View
+                                style={{
+                                    flexDirection: 'row'
+                                }}
+                            >
+                                <TouchableOpacity
+                                    style={{
+                                        width: 40,
+                                        height: 40,
+                                        alignItems: 'center',
+                                        justifyContent: 'center',
+                                        borderRadius: SIZES.radius,
+                                        backgroundColor: COLORS.primary
+                                    }}
+                                >
+                                    <Image
+                                        source={icons.customerservice}
+                                        style={{
+                                            width: 25,
+                                            height: 25,
+                                            tintColor: COLORS.white
+                                        }}
+                                    ></Image>
+                                </TouchableOpacity>
+                                <Text
+                                    style={{
+                                        color: COLORS.transparentBlack7,
+                                        flex: 1,
+                                        marginHorizontal: SIZES.font,
+                                        alignSelf: 'center',
+                                        ...FONTS.h4
+                                    }}
+                                >
+                                    Customer Service
+                                </Text>
+                                <Image
+                                    style={{
+                                        alignSelf: 'center',
+                                        tintColor: COLORS.lightGray1,
+                                        width: 12,
+                                        height: 12
+                                    }}
+                                    source={icons.rightarrow}
+                                />
+                            </View>
+                        </TouchableOpacity>
+                        <View
+                            style={{
+                                height: 15
+                            }}
+                        ></View>
+
+                        {/* Tentang Bank Sampah */}
+                        <TouchableOpacity
+                            style={{
+                                marginHorizontal: SIZES.padding,
+                                borderRadius: SIZES.radius,
+                                padding: SIZES.base,
+                                borderWidth: 1,
+                                borderColor: COLORS.lightGray1
+                            }}
+                            onPress={() => navigation.navigate('About')}
+                        >
+                            <View
+                                style={{
+                                    flexDirection: 'row'
+                                }}
+                            >
+                                <TouchableOpacity
+                                    style={{
+                                        width: 40,
+                                        height: 40,
+                                        alignItems: 'center',
+                                        justifyContent: 'center',
+                                        borderRadius: SIZES.radius,
+                                        backgroundColor: COLORS.primary
+                                    }}
+                                >
+                                    <Image
+                                        source={icons.banksampah}
+                                        style={{
+                                            width: 25,
+                                            height: 25,
+                                            tintColor: COLORS.white
+                                        }}
+                                    ></Image>
+                                </TouchableOpacity>
+                                <Text
+                                    style={{
+                                        color: COLORS.transparentBlack7,
+                                        flex: 1,
+                                        marginHorizontal: SIZES.font,
+                                        alignSelf: 'center',
+                                        ...FONTS.h4
+                                    }}
+                                >
+                                    Tentang Bank Sampah
+                                </Text>
+                                <Image
+                                    style={{
+                                        alignSelf: 'center',
+                                        tintColor: COLORS.lightGray1,
+                                        width: 12,
+                                        height: 12
+                                    }}
+                                    source={icons.rightarrow}
+                                />
+                            </View>
+                        </TouchableOpacity>
+                    </View>
                     <View
                         style={{
-                            height: 15
+                            marginTop: SIZES.padding,
+                            alignItems: 'center',
+                            justifyContent: 'center',
+                            marginBottom: 50
                         }}
-                    ></View>
-
-                    {/* Undang Teman */}
-                    <TouchableOpacity
-                        style={{
-                            marginHorizontal: SIZES.padding,
-                            borderRadius: SIZES.radius,
-                            padding: SIZES.base,
-                            borderWidth: 1,
-                            borderColor: COLORS.lightGray1
-                        }}
-                        onPress={() => onShare()}
                     >
-                        <View
-                            style={{
-                                flexDirection: 'row'
+                        <TextButton
+                            buttonContainerStyle={{
+                                borderRadius: 10,
+                                backgroundColor: COLORS.primary,
+                                paddingHorizontal: 50,
+                                paddingVertical: SIZES.radius
                             }}
-                        >
-                            <TouchableOpacity
-                                style={{
-                                    width: 40,
-                                    height: 40,
-                                    alignItems: 'center',
-                                    justifyContent: 'center',
-                                    borderRadius: SIZES.radius,
-                                    backgroundColor: COLORS.primary
-                                }}
-                            >
-                                <Image
-                                    source={icons.invite}
-                                    style={{
-                                        width: 25,
-                                        height: 25,
-                                        tintColor: COLORS.white
-                                    }}
-                                ></Image>
-                            </TouchableOpacity>
-                            <Text
-                                style={{
-                                    color: COLORS.transparentBlack7,
-                                    flex: 1,
-                                    marginHorizontal: SIZES.font,
-                                    alignSelf: 'center',
-                                    ...FONTS.h4
-                                }}
-                            >
-                                Undang Teman
-                            </Text>
-                            <Image
-                                style={{
-                                    alignSelf: 'center',
-                                    tintColor: COLORS.lightGray1,
-                                    width: 12,
-                                    height: 12
-                                }}
-                                source={icons.rightarrow}
-                            />
-                        </View>
-                    </TouchableOpacity>
-
-                    <View
-                        style={{
-                            height: 10
-                        }}
-                    ></View>
-                    <Text
-                        style={{
-                            color: COLORS.transparentBlack7,
-                            ...FONTS.h4,
-                            marginHorizontal: SIZES.padding,
-                            marginVertical: SIZES.padding
-                        }}
-                    >
-                        Info Lainnya
-                    </Text>
-
-                    {/* Kebijakan Privacy */}
-                    <TouchableOpacity
-                        style={{
-                            marginHorizontal: SIZES.padding,
-                            borderRadius: SIZES.radius,
-                            padding: SIZES.base,
-                            borderWidth: 1,
-                            borderColor: COLORS.lightGray1
-                        }}
-                        onPress={() => navigation.navigate('Kebijakan')}
-                    >
-                        <View
-                            style={{
-                                flexDirection: 'row'
-                            }}
-                        >
-                            <TouchableOpacity
-                                style={{
-                                    width: 40,
-                                    height: 40,
-                                    alignItems: 'center',
-                                    justifyContent: 'center',
-                                    borderRadius: SIZES.radius,
-                                    backgroundColor: COLORS.primary
-                                }}
-                            >
-                                <Image
-                                    source={icons.privacypolice}
-                                    style={{
-                                        width: 25,
-                                        height: 25,
-                                        tintColor: COLORS.white
-                                    }}
-                                ></Image>
-                            </TouchableOpacity>
-                            <Text
-                                style={{
-                                    color: COLORS.transparentBlack7,
-                                    flex: 1,
-                                    marginHorizontal: SIZES.font,
-                                    alignSelf: 'center',
-                                    ...FONTS.h4
-                                }}
-                            >
-                                Kebijakan Privasi
-                            </Text>
-                            <Image
-                                style={{
-                                    alignSelf: 'center',
-                                    tintColor: COLORS.lightGray1,
-                                    width: 12,
-                                    height: 12
-                                }}
-                                source={icons.rightarrow}
-                            />
-                        </View>
-                    </TouchableOpacity>
-                    <View
-                        style={{
-                            height: 15
-                        }}
-                    ></View>
-
-                    {/* Ketentuan Layanan */}
-                    <TouchableOpacity
-                        style={{
-                            marginHorizontal: SIZES.padding,
-                            borderRadius: SIZES.radius,
-                            padding: SIZES.base,
-                            borderWidth: 1,
-                            borderColor: COLORS.lightGray1
-                        }}
-                        onPress={() => navigation.navigate('Ketentuan')}
-                    >
-                        <View
-                            style={{
-                                flexDirection: 'row'
-                            }}
-                        >
-                            <TouchableOpacity
-                                style={{
-                                    width: 40,
-                                    height: 40,
-                                    alignItems: 'center',
-                                    justifyContent: 'center',
-                                    borderRadius: SIZES.radius,
-                                    backgroundColor: COLORS.primary
-                                }}
-                            >
-                                <Image
-                                    source={icons.policyterm}
-                                    style={{
-                                        width: 25,
-                                        height: 25,
-                                        tintColor: COLORS.white
-                                    }}
-                                ></Image>
-                            </TouchableOpacity>
-                            <Text
-                                style={{
-                                    color: COLORS.transparentBlack7,
-                                    flex: 1,
-                                    marginHorizontal: SIZES.font,
-                                    alignSelf: 'center',
-                                    ...FONTS.h4
-                                }}
-                            >
-                                Ketentuan Layanan
-                            </Text>
-                            <Image
-                                style={{
-                                    alignSelf: 'center',
-                                    tintColor: COLORS.lightGray1,
-                                    width: 12,
-                                    height: 12
-                                }}
-                                source={icons.rightarrow}
-                            />
-                        </View>
-                    </TouchableOpacity>
-                    <View
-                        style={{
-                            height: 15
-                        }}
-                    ></View>
-
-                    {/* Customer Service */}
-                    <TouchableOpacity
-                        style={{
-                            marginHorizontal: SIZES.padding,
-                            borderRadius: SIZES.radius,
-                            padding: SIZES.base,
-                            borderWidth: 1,
-                            borderColor: COLORS.lightGray1
-                        }}
-                        onPress={() => navigation.navigate('Cs')}
-                    >
-                        <View
-                            style={{
-                                flexDirection: 'row'
-                            }}
-                        >
-                            <TouchableOpacity
-                                style={{
-                                    width: 40,
-                                    height: 40,
-                                    alignItems: 'center',
-                                    justifyContent: 'center',
-                                    borderRadius: SIZES.radius,
-                                    backgroundColor: COLORS.primary
-                                }}
-                            >
-                                <Image
-                                    source={icons.customerservice}
-                                    style={{
-                                        width: 25,
-                                        height: 25,
-                                        tintColor: COLORS.white
-                                    }}
-                                ></Image>
-                            </TouchableOpacity>
-                            <Text
-                                style={{
-                                    color: COLORS.transparentBlack7,
-                                    flex: 1,
-                                    marginHorizontal: SIZES.font,
-                                    alignSelf: 'center',
-                                    ...FONTS.h4
-                                }}
-                            >
-                                Customer Service
-                            </Text>
-                            <Image
-                                style={{
-                                    alignSelf: 'center',
-                                    tintColor: COLORS.lightGray1,
-                                    width: 12,
-                                    height: 12
-                                }}
-                                source={icons.rightarrow}
-                            />
-                        </View>
-                    </TouchableOpacity>
-                    <View
-                        style={{
-                            height: 15
-                        }}
-                    ></View>
-
-                    {/* Tentang Bank Sampah */}
-                    <TouchableOpacity
-                        style={{
-                            marginHorizontal: SIZES.padding,
-                            borderRadius: SIZES.radius,
-                            padding: SIZES.base,
-                            borderWidth: 1,
-                            borderColor: COLORS.lightGray1
-                        }}
-                        onPress={() => navigation.navigate('About')}
-                    >
-                        <View
-                            style={{
-                                flexDirection: 'row'
-                            }}
-                        >
-                            <TouchableOpacity
-                                style={{
-                                    width: 40,
-                                    height: 40,
-                                    alignItems: 'center',
-                                    justifyContent: 'center',
-                                    borderRadius: SIZES.radius,
-                                    backgroundColor: COLORS.primary
-                                }}
-                            >
-                                <Image
-                                    source={icons.banksampah}
-                                    style={{
-                                        width: 25,
-                                        height: 25,
-                                        tintColor: COLORS.white
-                                    }}
-                                ></Image>
-                            </TouchableOpacity>
-                            <Text
-                                style={{
-                                    color: COLORS.transparentBlack7,
-                                    flex: 1,
-                                    marginHorizontal: SIZES.font,
-                                    alignSelf: 'center',
-                                    ...FONTS.h4
-                                }}
-                            >
-                                Tentang Bank Sampah
-                            </Text>
-                            <Image
-                                style={{
-                                    alignSelf: 'center',
-                                    tintColor: COLORS.lightGray1,
-                                    width: 12,
-                                    height: 12
-                                }}
-                                source={icons.rightarrow}
-                            />
-                        </View>
-                    </TouchableOpacity>
-                </View>
-                <View
-                    style={{
-                        marginTop: SIZES.padding,
-                        alignItems: 'center',
-                        justifyContent: 'center',
-                        marginBottom: 50
-                    }}
-                >
-                    <TextButton
-                        buttonContainerStyle={{
-                            borderRadius: 10,
-                            backgroundColor: COLORS.primary,
-                            paddingHorizontal: 50,
-                            paddingVertical: SIZES.radius
-                        }}
-                        label="Logout"
-                        onPress={() => navigation.navigate('Login')}
-                    ></TextButton>
-                </View>
-            </ScrollView>
-        </View>
+                            label="Logout"
+                            onPress={() => navigation.navigate('Login')}
+                        ></TextButton>
+                    </View>
+                </ScrollView>
+            </View>
+        </>
     );
 };
 
