@@ -8,6 +8,7 @@ import {
 } from 'react-native';
 import { TextButton, Header, IconButton } from '../components';
 import { SIZES, COLORS, icons, FONTS } from '../constants';
+import config from '../api/config';
 
 const Login = ({ navigation }) => {
     const [email, setEmail] = React.useState('');
@@ -15,7 +16,7 @@ const Login = ({ navigation }) => {
 
     function signin() {
         try {
-            fetch('http://10.234.183.19/be-banksampah/public/api/login', {
+            fetch(config.ipaddress + '/api/login', {
                 method: 'POST',
                 headers: {
                     Accept: 'application/json',
@@ -27,9 +28,10 @@ const Login = ({ navigation }) => {
                 })
             })
                 .then((response) => response.json())
+
                 .then((json) => {
                     if (json.success == true) {
-                        navigation.navigate('Transaction');
+                        navigation.navigate('Penarikan');
                     } else {
                         console.log('Nice Try');
                     }

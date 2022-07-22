@@ -13,6 +13,9 @@ import UndangTeman from './UndangTeman';
 import EditPassword from './EditPassword';
 import Detail from './Detail';
 import DetailHistoryTransaction from './DetailHistoryTransaction';
+import Pembayaran from './Pembayaran';
+import Selesai from './Selesai';
+import Penarikan from './Penarikan';
 
 export {
     Login,
@@ -29,5 +32,8 @@ export {
     UndangTeman,
     EditPassword,
     Detail,
-    DetailHistoryTransaction
+    DetailHistoryTransaction,
+    Pembayaran,
+    Selesai,
+    Penarikan
 };

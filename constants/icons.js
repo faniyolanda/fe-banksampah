@@ -21,6 +21,8 @@ const instagram = require('../assets/icons/instagram.png');
 const penarikan = require('../assets/icons/penarikan.png');
 const name = require('../assets/icons/name.png');
 const userdefault = require('../assets/icons/userdefault.png');
+const delivery = require('../assets/icons/delivery.png');
+const success = require('../assets/icons/success.png');
 
 export default {
     home,
@@ -45,5 +47,7 @@ export default {
     instagram,
     penarikan,
     name,
-    userdefault
+    userdefault,
+    delivery,
+    success
 };

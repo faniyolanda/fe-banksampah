@@ -20,7 +20,10 @@ import {
     Ketentuan,
     EditPassword,
     Detail,
-    DetailHistoryTransaction
+    DetailHistoryTransaction,
+    Pembayaran,
+    Selesai,
+    Penarikan
 } from './screens';
 
 const Stack = createNativeStackNavigator();
@@ -56,6 +59,9 @@ function App() {
                     name="DetailHistoryTransaction"
                     component={DetailHistoryTransaction}
                 />
+                <Stack.Screen name="Pembayaran" component={Pembayaran} />
+                <Stack.Screen name="Selesai" component={Selesai} />
+                <Stack.Screen name="Penarikan" component={Penarikan} />
             </Stack.Navigator>
         </NavigationContainer>
     );
