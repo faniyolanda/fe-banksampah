@@ -9,10 +9,19 @@ import {
 import { TextButton, Header, IconButton } from '../components';
 import { SIZES, COLORS, icons, FONTS } from '../constants';
 import config from '../api/config';
+import AsyncStorage from '@react-native-async-storage/async-storage';
+import Snackbar from 'react-native-snackbar';
 
 const Login = ({ navigation }) => {
     const [email, setEmail] = React.useState('');
     const [password, setPassword] = React.useState('');
+
+    function showSnackBar(pesan) {
+        Snackbar.show({
+            text: pesan,
+            duration: Snackbar.LENGTH_SHORT
+        });
+    }
 
     function signin() {
         try {
@@ -31,9 +40,22 @@ const Login = ({ navigation }) => {
 
                 .then((json) => {
                     if (json.success == true) {
-                        navigation.navigate('Penarikan');
+                        AsyncStorage.setItem(
+                            '@nasabahid',
+                            json.user.nasabah_id
+                        );
+                        AsyncStorage.setItem(
+                            '@nasabahemail',
+                            json.user.nasabah_email
+                        );
+                        AsyncStorage.setItem(
+                            '@nasabahnama',
+                            json.user.nasabah_nama
+                        );
+                        showSnackBar('Berhasil login');
+                        navigation.navigate('Tabs');
                     } else {
-                        console.log('Nice Try');
+                        showSnackBar(json.message);
                     }
                 })
                 .catch((err) => console.log(err));

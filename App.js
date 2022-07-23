@@ -23,7 +23,8 @@ import {
     DetailHistoryTransaction,
     Pembayaran,
     Selesai,
-    Penarikan
+    Penarikan,
+    Splash
 } from './screens';
 
 const Stack = createNativeStackNavigator();
@@ -35,8 +36,9 @@ function App() {
                 screenOptions={{
                     headerShown: false
                 }}
-                initialRouteName={'Login'}
+                initialRouteName={'Splash'}
             >
+                <Stack.Screen name="Splash" component={Splash} />
                 <Stack.Screen name="Tabs" component={Tabs} />
                 <Stack.Screen name="Home" component={Home} />
                 <Stack.Screen name="Notification" component={Notification} />

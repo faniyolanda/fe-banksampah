@@ -9,9 +9,17 @@ import {
     StatusBar
 } from 'react-native';
 import { SIZES, COLORS, icons, FONTS } from '../constants';
-import { TextButton, Header, IconButton } from '../components';
+import {
+    TextButton,
+    Header,
+    IconButton,
+    NoticeModalTwoButton
+} from '../components';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 
 const Profile = ({ navigation }) => {
+    const [showNoticeModal, setShowNoticeModal] = React.useState(false);
+
     function renderHeader() {
         return (
             <Header
@@ -85,6 +93,16 @@ const Profile = ({ navigation }) => {
         }
     };
 
+    const removeData = async () => {
+        try {
+            await AsyncStorage.removeItem('@nasabahid');
+            await AsyncStorage.removeItem('@nasabahemail');
+            await AsyncStorage.removeItem('@nasabahnama');
+        } catch (error) {
+            console.log(error);
+        }
+    };
+
     return (
         <>
             <StatusBar barStyle="dark-content" backgroundColor="#ffffff" />
@@ -94,6 +112,21 @@ const Profile = ({ navigation }) => {
                     backgroundColor: COLORS.white
                 }}
             >
+                {showNoticeModal && (
+                    <NoticeModalTwoButton
+                        imageContent={icons.logout}
+                        titleContent="Yakin ingin keluar?"
+                        descriptionContent="Nanti kalau udah balik tinggal login aja ya"
+                        isVisible={showNoticeModal}
+                        onRequestClose={() => setShowNoticeModal(false)}
+                        onPress={() => {
+                            setShowNoticeModal(false);
+                            removeData();
+                            navigation.navigate('Splash');
+                        }}
+                    />
+                )}
+
                 {renderHeader()}
 
                 <ScrollView
@@ -673,7 +706,9 @@ const Profile = ({ navigation }) => {
                                 paddingVertical: SIZES.radius
                             }}
                             label="Logout"
-                            onPress={() => navigation.navigate('Login')}
+                            onPress={() => {
+                                setShowNoticeModal(true);
+                            }}
                         ></TextButton>
                     </View>
                 </ScrollView>

@@ -16,6 +16,7 @@ import DetailHistoryTransaction from './DetailHistoryTransaction';
 import Pembayaran from './Pembayaran';
 import Selesai from './Selesai';
 import Penarikan from './Penarikan';
+import Splash from './Splash';
 
 export {
     Login,
@@ -35,5 +36,6 @@ export {
     DetailHistoryTransaction,
     Pembayaran,
     Selesai,
-    Penarikan
+    Penarikan,
+    Splash
 };

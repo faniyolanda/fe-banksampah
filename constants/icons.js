@@ -23,6 +23,8 @@ const name = require('../assets/icons/name.png');
 const userdefault = require('../assets/icons/userdefault.png');
 const delivery = require('../assets/icons/delivery.png');
 const success = require('../assets/icons/success.png');
+const cross = require('../assets/icons/cross.png');
+const logout = require('../assets/icons/logout.png');
 
 export default {
     home,
@@ -49,5 +51,7 @@ export default {
     name,
     userdefault,
     delivery,
-    success
+    success,
+    cross,
+    logout
 };
