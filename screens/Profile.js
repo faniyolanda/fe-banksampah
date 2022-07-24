@@ -16,6 +16,7 @@ import {
     NoticeModalTwoButton
 } from '../components';
 import AsyncStorage from '@react-native-async-storage/async-storage';
+import { StackActions } from '@react-navigation/native';
 
 const Profile = ({ navigation }) => {
     const [showNoticeModal, setShowNoticeModal] = React.useState(false);
@@ -122,7 +123,7 @@ const Profile = ({ navigation }) => {
                         onPress={() => {
                             setShowNoticeModal(false);
                             removeData();
-                            navigation.navigate('Splash');
+                            navigation.dispatch(StackActions.replace('Splash'));
                         }}
                     />
                 )}

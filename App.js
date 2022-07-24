@@ -19,12 +19,13 @@ import {
     Kebijakan,
     Ketentuan,
     EditPassword,
-    Detail,
+    DetailSampah,
     DetailHistoryTransaction,
     Pembayaran,
     Selesai,
     Penarikan,
-    Splash
+    Splash,
+    OnBoarding
 } from './screens';
 
 const Stack = createNativeStackNavigator();
@@ -39,6 +40,7 @@ function App() {
                 initialRouteName={'Splash'}
             >
                 <Stack.Screen name="Splash" component={Splash} />
+                <Stack.Screen name="OnBoarding" component={OnBoarding} />
                 <Stack.Screen name="Tabs" component={Tabs} />
                 <Stack.Screen name="Home" component={Home} />
                 <Stack.Screen name="Notification" component={Notification} />
@@ -56,7 +58,7 @@ function App() {
                 <Stack.Screen name="Kebijakan" component={Kebijakan} />
                 <Stack.Screen name="UndangTeman" component={UndangTeman} />
                 <Stack.Screen name="EditPassword" component={EditPassword} />
-                <Stack.Screen name="Detail" component={Detail} />
+                <Stack.Screen name="DetailSampah" component={DetailSampah} />
                 <Stack.Screen
                     name="DetailHistoryTransaction"
                     component={DetailHistoryTransaction}

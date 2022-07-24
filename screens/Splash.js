@@ -12,7 +12,7 @@ const Splash = ({ navigation }) => {
                 if (data !== null) {
                     navigation.dispatch(StackActions.replace('Tabs'));
                 } else {
-                    navigation.dispatch(StackActions.replace('Login'));
+                    navigation.dispatch(StackActions.replace('OnBoarding'));
                 }
             };
             __validationSession();

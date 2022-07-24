@@ -13,7 +13,7 @@ import { COLORS, FONTS, SIZES, constants, icons } from '../constants';
 import { IconButton } from '../components';
 import TextButton from './TextButton';
 
-const NoticeModalTwoButton = ({
+const NoticeModalJual = ({
     isVisible,
     onRequestClose,
     imageContent,
@@ -147,7 +147,7 @@ const NoticeModalTwoButton = ({
                     <View
                         style={{
                             position: 'absolute',
-                            bottom: 400,
+                            bottom: 340,
                             left: 0,
                             right: 0,
                             paddingVertical: SIZES.padding,
@@ -187,7 +187,7 @@ const NoticeModalTwoButton = ({
                                 paddingVertical: SIZES.radius,
                                 flex: 1
                             }}
-                            label="Keluar"
+                            label="Jual"
                             onPress={onPress}
                         ></TextButton>
                     </View>
@@ -197,4 +197,4 @@ const NoticeModalTwoButton = ({
     );
 };
 
-export default NoticeModalTwoButton;
+export default NoticeModalJual;

@@ -40,7 +40,7 @@ const Home = ({ navigation }) => {
         return (
             <TouchableOpacity
                 activeOpacity={0.8}
-                onPress={() => navigation.navigate('Detail')}
+                onPress={() => navigation.navigate('DetailSampah')}
             >
                 <View style={style.card}>
                     <View style={{ alignItems: 'flex-end' }}>

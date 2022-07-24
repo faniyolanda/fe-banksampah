@@ -11,12 +11,13 @@ import Ketentuan from './Ketentuan';
 import Kebijakan from './Kebijakan';
 import UndangTeman from './UndangTeman';
 import EditPassword from './EditPassword';
-import Detail from './Detail';
+import DetailSampah from './DetailSampah';
 import DetailHistoryTransaction from './DetailHistoryTransaction';
 import Pembayaran from './Pembayaran';
 import Selesai from './Selesai';
 import Penarikan from './Penarikan';
 import Splash from './Splash';
+import OnBoarding from './OnBoarding';
 
 export {
     Login,
@@ -32,10 +33,11 @@ export {
     Kebijakan,
     UndangTeman,
     EditPassword,
-    Detail,
+    DetailSampah,
     DetailHistoryTransaction,
     Pembayaran,
     Selesai,
     Penarikan,
-    Splash
+    Splash,
+    OnBoarding
 };

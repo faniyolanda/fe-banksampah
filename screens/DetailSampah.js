@@ -1,10 +1,19 @@
 import React from 'react';
-import { View, SafeAreaView, Image, Text, StyleSheet } from 'react-native';
+import {
+    View,
+    SafeAreaView,
+    Image,
+    Text,
+    StyleSheet,
+    TouchableOpacity
+} from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialIcons';
-import { Header, IconButton } from '../components';
+import { Header, IconButton, NoticeModalJual } from '../components';
 import { SIZES, COLORS, icons, FONTS } from '../constants';
 
-const Detail = ({ navigation }) => {
+const DetailSampah = ({ navigation }) => {
+    const [showNoticeModal, setShowNoticeModal] = React.useState(false);
+
     function renderHeader() {
         return (
             <Header
@@ -65,6 +74,19 @@ const Detail = ({ navigation }) => {
                 backgroundColor: COLORS.white
             }}
         >
+            {showNoticeModal && (
+                <NoticeModalJual
+                    imageContent={icons.logout}
+                    titleContent="Yakin ingin keluar?"
+                    descriptionContent="Nanti kalau udah balik tinggal login aja ya"
+                    isVisible={showNoticeModal}
+                    onRequestClose={() => setShowNoticeModal(false)}
+                    onPress={() => {
+                        navigation.navigate('Transaction');
+                    }}
+                />
+            )}
+
             {renderHeader()}
             <View style={style.imageContainer}>
                 <Image
@@ -158,7 +180,12 @@ const Detail = ({ navigation }) => {
                             </View>
                         </View>
 
-                        <View style={style.buyBtn}>
+                        <TouchableOpacity
+                            style={style.buyBtn}
+                            onPress={() => {
+                                setShowNoticeModal(true);
+                            }}
+                        >
                             <Text
                                 style={{
                                     color: COLORS.white,
@@ -168,7 +195,7 @@ const Detail = ({ navigation }) => {
                             >
                                 Buy
                             </Text>
-                        </View>
+                        </TouchableOpacity>
                     </View>
                 </View>
             </View>
@@ -233,4 +260,4 @@ const style = StyleSheet.create({
     }
 });
 
-export default Detail;
+export default DetailSampah;
